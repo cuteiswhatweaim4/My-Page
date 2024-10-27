@@ -3,49 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Knowledge Facts, Ideas & Technology</title>
+    <link rel="stylesheet" href="Style.css">
+    <title>Knowledge Facts, Ideas, and Technology</title>
 </head>
 <body>
     <header>
-        <h1>Knowledge Facts, Ideas & Technology</h1>
+        <h1>Knowledge, Facts, Ideas, and Technology</h1>
         <nav>
             <ul>
-                <li><a href="#" onclick="toggleContent('quantumContent')">Quantum Computing</a></li>
-                <li><a href="#" onclick="toggleContent('blockchainContent')">Blockchain Technology</a></li>
-                <li><a href="#" onclick="toggleContent('augmentedContent')">Augmented Reality</a></li>
+                <li><a href="#" onclick="toggleVisibility('quantum-section')">Quantum Computing</a></li>
+                <li><a href="#" onclick="toggleVisibility('blockchain-section')">Blockchain Technology</a></li>
+                <li><a href="#" onclick="toggleVisibility('augmented-section')">Augmented Reality</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="quantumContent" class="hidden">
+        <section id="quantum-section" style="display: none;">
             <h2>Quantum Computing</h2>
-            <img src="images/quantum.jpg" alt="Quantum Computing">
-            <p>Quantum computing harnesses the peculiar principles of quantum mechanics to perform computations much faster than classical computers.</p>
+            <img src="https://your-repo-url/quantum.jpg" alt="Quantum Computing">
+            <p>Quantum computing harnesses the phenomena of quantum mechanics to process information...</p>
         </section>
-        <section id="blockchainContent" class="hidden">
+
+        <section id="blockchain-section" style="display: none;">
             <h2>Blockchain Technology</h2>
-            <img src="images/blockchain.jpg" alt="Blockchain Technology">
-            <p>Blockchain is a decentralized digital ledger that records transactions across many computers in such a way that the registered transactions cannot be altered retroactively.</p>
+            <img src="https://your-repo-url/blockchain.jpg" alt="Blockchain Technology">
+            <p>Blockchain is a decentralized digital ledger that records transactions across many computers...</p>
         </section>
-        <section id="augmentedContent" class="hidden">
+
+        <section id="augmented-section" style="display: none;">
             <h2>Augmented Reality</h2>
-            <img src="images/augmented.jpg" alt="Augmented Reality">
-            <p>Augmented reality (AR) is an interactive experience where real-world environments are enhanced by computer-generated perceptual information.</p>
+            <img src="https://your-repo-url/augmented.jpg" alt="Augmented Reality">
+            <p>Augmented reality (AR) is an interactive experience where the real world is enhanced by computer-generated content...</p>
         </section>
     </main>
 
     <script>
-        function toggleContent(id) {
+        function toggleVisibility(sectionId) {
             const sections = document.querySelectorAll('section');
             sections.forEach(section => {
-                if (section.id === id) {
-                    section.classList.toggle('hidden');
-                } else {
-                    section.classList.add('hidden');
-                }
+                section.style.display = 'none'; // Hide all sections
             });
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block'; // Show the selected section
         }
     </script>
 </body>
