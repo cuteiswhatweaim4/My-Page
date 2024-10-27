@@ -26,10 +26,11 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -37,18 +38,29 @@ nav a {
     color: #333333; /* Dark text for contrast */
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition */
 }
 
 nav a:hover {
     color: #ffeb3b; /* Brighter yellow on hover */
 }
 
-#content {
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
     margin: 20px;
     padding: 20px;
     background-color: #fff8b0; /* Pale yellow */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.topic-section {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .topic-image {
@@ -57,7 +69,6 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/* Animation Styles */
 .animated-text {
     animation: fadeIn 1s ease-in-out forwards;
     opacity: 0; /* Start hidden */
