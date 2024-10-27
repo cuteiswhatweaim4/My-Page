@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Knowledge Facts and Ideas</title>
+    <script>
+        function toggleVisibility(topic) {
+            const content = document.getElementById(topic);
+            const isVisible = content.style.display === "block";
+            // Hide all topic sections
+            const sections = document.querySelectorAll('.topic-section');
+            sections.forEach(section => section.style.display = 'none');
+
+            // Show the selected topic if it was not already visible
+            if (!isVisible) {
+                content.style.display = "block";
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -14,14 +28,14 @@
     
     <nav>
         <ul>
-            <li><a href="#quantum">Quantum Computing</a></li>
-            <li><a href="#blockchain">Blockchain Technology</a></li>
-            <li><a href="#augmented">Augmented Reality</a></li>
+            <li><a href="#" onclick="toggleVisibility('quantum')">Quantum Computing</a></li>
+            <li><a href="#" onclick="toggleVisibility('blockchain')">Blockchain Technology</a></li>
+            <li><a href="#" onclick="toggleVisibility('augmented')">Augmented Reality</a></li>
         </ul>
     </nav>
 
     <main id="content">
-        <section id="quantum" class="topic-section">
+        <section id="quantum" class="topic-section" style="display: none;">
             <h2 class="animated-text">Quantum Computing</h2>
             <img src="images/quantum.jpg" alt="Quantum Computing" class="topic-image">
             <p>
@@ -36,7 +50,7 @@
             </p>
         </section>
         
-        <section id="blockchain" class="topic-section">
+        <section id="blockchain" class="topic-section" style="display: none;">
             <h2 class="animated-text">Blockchain Technology</h2>
             <img src="images/blockchain.jpg" alt="Blockchain Technology" class="topic-image">
             <p>
@@ -51,7 +65,7 @@
             </p>
         </section>
         
-        <section id="augmented" class="topic-section">
+        <section id="augmented" class="topic-section" style="display: none;">
             <h2 class="animated-text">Augmented Reality</h2>
             <img src="images/augmented.jpg" alt="Augmented Reality" class="topic-image">
             <p>
