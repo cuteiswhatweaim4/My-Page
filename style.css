@@ -1,14 +1,16 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Light gray background for better contrast */
+    background-color: #FFF8E1; /* Light Yellow Background */
+    color: #4A4A4A; /* Dark Gray Text */
 }
 
 header {
     text-align: center;
-    background-color: #f9c74f; /* Light yellow background */
     padding: 20px;
+    background-color: #FFEB3B; /* Light Yellow Header */
 }
 
 .header-image {
@@ -16,52 +18,70 @@ header {
     height: auto;
 }
 
-nav {
-    background-color: #f9c74f; /* Light yellow background */
-    padding: 10px;
-}
-
 nav ul {
     list-style-type: none;
     padding: 0;
+    text-align: center;
+    background-color: #FFC107; /* Amber Background */
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #333; /* Dark text color */
+    color: #fff; /* White Text */
+    font-weight: bold;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
 main {
     padding: 20px;
 }
 
 .topic-section {
-    display: flex; /* Use flexbox for layout */
-    margin-bottom: 30px; /* Space between sections */
-    background-color: #fff; /* White background for topic sections */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    overflow: hidden; /* Ensure no overflow */
+    display: flex;
+    margin-bottom: 40px;
 }
 
 .topic-image {
-    width: 50%; /* Set width for the image */
-    object-fit: cover; /* Ensure the image covers the area */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Adjust based on your layout preference */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px; /* Rounded Corners */
 }
 
 .topic-content {
-    padding: 20px; /* Space for text content */
-    width: 50%; /* Set width for the content */
+    flex: 1; /* Allows content to take remaining space */
+}
+
+/* Animated Text */
+.animated-text {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f9c74f; /* Light yellow background */
+    background-color: #FFEB3B; /* Light Yellow Footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
