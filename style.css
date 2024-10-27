@@ -1,101 +1,67 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #fffbe6; /* Light yellow background */
     margin: 0;
     padding: 0;
-    color: #333;
+    background-color: #f0f0f0; /* Light gray background for better contrast */
 }
 
 header {
     text-align: center;
+    background-color: #f9c74f; /* Light yellow background */
     padding: 20px;
-    background-color: #ffd966; /* Soft yellow */
 }
 
 .header-image {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
 }
 
 nav {
-    background-color: #f1c232; /* Warm yellow */
-    padding: 15px;
+    background-color: #f9c74f; /* Light yellow background */
+    padding: 10px;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
+    margin: 0 10px;
 }
 
-nav a {
-    color: #333333; /* Dark text for contrast */
+nav ul li a {
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease; /* Smooth transition */
-}
-
-nav a:hover {
-    color: #ffeb3b; /* Brighter yellow on hover */
+    color: #333; /* Dark text color */
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin: 20px;
     padding: 20px;
-    background-color: #fff8b0; /* Pale yellow */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .topic-section {
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for layout */
+    margin-bottom: 30px; /* Space between sections */
+    background-color: #fff; /* White background for topic sections */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Ensure no overflow */
 }
 
 .topic-image {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 8px;
+    width: 50%; /* Set width for the image */
+    object-fit: cover; /* Ensure the image covers the area */
+    height: auto; /* Maintain aspect ratio */
 }
 
-.animated-text {
-    animation: fadeIn 1s ease-in-out forwards;
-    opacity: 0; /* Start hidden */
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.topic-content {
+    padding: 20px; /* Space for text content */
+    width: 50%; /* Set width for the content */
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f1c232; /* Matching warm yellow */
-    color: #333;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer a {
-    color: #333333;
-    text-decoration: none;
+    background-color: #f9c74f; /* Light yellow background */
 }
