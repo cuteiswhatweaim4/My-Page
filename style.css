@@ -1,8 +1,14 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff8e1; /* Light yellow background */
+    color: #333; /* Default text color */
 }
 
 nav {
@@ -14,6 +20,7 @@ nav {
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -25,6 +32,11 @@ nav ul li a {
     color: #333; /* Dark text for links */
     text-decoration: none; /* No underline */
     font-weight: bold; /* Bold text */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #d48b2d; /* Change color on hover */
 }
 
 main {
@@ -42,7 +54,7 @@ section {
 section img {
     width: 100%; /* Responsive image */
     max-width: 600px; /* Limit maximum size */
-    height: auto; /* Keep aspect ratio */
+    height: auto; /* Maintain aspect ratio */
     margin: 20px auto; /* Center the image */
     display: block; /* Block element */
 }
@@ -54,4 +66,20 @@ h2 {
 p {
     line-height: 1.6; /* Improve readability */
     color: #555; /* Gray text color */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9c74f; /* Match nav background */
+    color: #333; /* Dark text for footer */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack items vertically */
+        margin: 10px 0; /* Spacing between items */
+    }
 }
