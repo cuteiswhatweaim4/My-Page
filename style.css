@@ -57,6 +57,23 @@ nav a:hover {
     border-radius: 8px;
 }
 
+/* Animation Styles */
+.animated-text {
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0; /* Start hidden */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 footer {
     text-align: center;
     padding: 20px;
