@@ -2,17 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Light background */
+    background-color: #fff8e1; /* Light yellow background */
 }
 
-header {
-    position: relative;
+nav {
+    background-color: #f9c74f; /* Aesthetic yellow */
+    padding: 15px;
     text-align: center;
-    padding: 50px;
-    background-image: url('header-image.jpg'); /* Your original header background image */
-    background-size: cover; /* Cover the entire header area */
-    background-position: center; /* Center the image */
-    color: white; /* Text color */
 }
 
 nav ul {
@@ -26,7 +22,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* Link color */
+    color: #333; /* Dark text for links */
     text-decoration: none; /* No underline */
     font-weight: bold; /* Bold text */
 }
@@ -47,7 +43,7 @@ section img {
     width: 100%; /* Responsive image */
     max-width: 600px; /* Limit maximum size */
     height: auto; /* Keep aspect ratio */
-    margin: 0 auto; /* Center the image */
+    margin: 20px auto; /* Center the image */
     display: block; /* Block element */
 }
 
@@ -58,11 +54,4 @@ h2 {
 p {
     line-height: 1.6; /* Improve readability */
     color: #555; /* Gray text color */
-}
-
-/* Background color for the body */
-body {
-    background-image: url('header-image.jpg'); /* Ensure background fits screen */
-    background-size: cover; /* Cover entire page */
-    background-position: center; /* Center the background */
 }
