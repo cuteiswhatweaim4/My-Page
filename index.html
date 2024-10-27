@@ -3,97 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knowledge, Facts, Ideas, and Technology</title>
+    <title>Knowledge Facts</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Knowledge, Facts, Ideas, and Technology</h1>
-        <img src="images/header-image.jpg" alt="Header Image" class="header-image">
+        <h1>Knowledge Facts, Ideas, and Technology</h1>
     </header>
-
+    
     <nav>
         <ul>
-            <li><a href="#quantum" onclick="toggleVisibility('quantum')">Quantum Computing</a></li>
-            <li><a href="#blockchain" onclick="toggleVisibility('blockchain')">Blockchain Technology</a></li>
-            <li><a href="#augmented" onclick="toggleVisibility('augmented')">Augmented Reality</a></li>
+            <li><a href="#quantum-computing" class="animated-text">Quantum Computing</a></li>
+            <li><a href="#blockchain" class="animated-text">Blockchain Technology</a></li>
+            <li><a href="#augmented-reality" class="animated-text">Augmented Reality</a></li>
         </ul>
     </nav>
 
     <main>
-        <section id="quantum" class="topic-section" style="display: none;">
-            <h2 class="animated-text">Quantum Computing</h2>
-            <div class="topic-container">
-                <img src="images/quantum.jpg" alt="Quantum Computing" class="topic-image">
-                <div class="topic-content">
-                    <p>
-                        Quantum computing is a revolutionary technology that utilizes the principles of quantum mechanics to process information...
-                    </p>
-                    <p>
-                        The key advantage of quantum computing lies in its ability to perform multiple calculations simultaneously...
-                    </p>
-                    <p>
-                        <strong>Learn more:</strong> 
-                        <a href="https://quantum-computing.ibm.com/" target="_blank">IBM Quantum Computing</a>
-                    </p>
-                </div>
+        <section id="quantum-computing" class="topic-section">
+            <div class="topic-content">
+                <h2>Quantum Computing</h2>
+                <p>This section will cover details about quantum computing.</p>
             </div>
         </section>
-
-        <section id="blockchain" class="topic-section" style="display: none;">
-            <h2 class="animated-text">Blockchain Technology</h2>
-            <div class="topic-container">
-                <img src="images/blockchain.jpg" alt="Blockchain Technology" class="topic-image">
-                <div class="topic-content">
-                    <p>
-                        Blockchain is a decentralized digital ledger technology that securely records transactions across many computers...
-                    </p>
-                    <p>
-                        It is the backbone technology for cryptocurrencies like Bitcoin, allowing for secure and transparent transactions...
-                    </p>
-                    <p>
-                        <strong>Learn more:</strong> 
-                        <a href="https://www.ibm.com/topics/what-is-blockchain" target="_blank">IBM Blockchain</a>
-                    </p>
-                </div>
+        
+        <section id="blockchain" class="topic-section">
+            <div class="topic-content">
+                <h2>Blockchain Technology</h2>
+                <p>This section will cover details about blockchain technology.</p>
             </div>
         </section>
-
-        <section id="augmented" class="topic-section" style="display: none;">
-            <h2 class="animated-text">Augmented Reality</h2>
-            <div class="topic-container">
-                <img src="images/augmented.jpg" alt="Augmented Reality" class="topic-image">
-                <div class="topic-content">
-                    <p>
-                        Augmented reality (AR) is an interactive experience where real-world environments are enhanced by computer-generated perceptual information...
-                    </p>
-                    <p>
-                        AR technology is used in various applications, from gaming to training simulations and retail experiences...
-                    </p>
-                    <p>
-                        <strong>Learn more:</strong> 
-                        <a href="https://www.wired.com/story/what-is-augmented-reality/" target="_blank">Wired - What is Augmented Reality?</a>
-                    </p>
-                </div>
+        
+        <section id="augmented-reality" class="topic-section">
+            <div class="topic-content">
+                <h2>Augmented Reality</h2>
+                <p>This section will cover details about augmented reality.</p>
             </div>
         </section>
     </main>
-
+    
     <footer>
-        <p>© 2024 Knowledge, Facts, Ideas, and Technology. All rights reserved.</p>
+        <p>&copy; 2024 Knowledge Facts. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        function toggleVisibility(topic) {
-            const sections = document.querySelectorAll('.topic-section');
-            sections.forEach(section => {
-                if (section.id === topic) {
-                    section.style.display = section.style.display === 'none' ? 'flex' : 'none';
-                } else {
-                    section.style.display = 'none';
-                }
-            });
-        }
-    </script>
 </body>
 </html>
