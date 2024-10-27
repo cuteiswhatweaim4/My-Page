@@ -9,13 +9,14 @@ body {
 
 header {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: #FFEB3B; /* Light Yellow Header */
 }
 
 .header-image {
-    max-width: 80%; /* Adjust to make the image smaller */
-    height: auto;
+    max-width: 100%; /* Responsive width */
+    height: 100px; /* Set a fixed height for smaller image */
+    object-fit: cover; /* Maintain aspect ratio */
     margin: 0 auto; /* Center the image */
 }
 
@@ -53,7 +54,7 @@ main {
 }
 
 .topic-image {
-    max-width: 300px; /* Adjust based on your layout preference */
+    max-width: 300px; /* Keep image size manageable */
     height: auto;
     margin-right: 20px;
     border-radius: 10px; /* Rounded Corners */
