@@ -1,81 +1,74 @@
-/* Basic Reset */
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
+/* Body styles */
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #f5f5dc; /* Light beige background */
+    color: #3e2723; /* Dark brown text */
     line-height: 1.6;
-    background-color: #f5f0e1; /* Light beige background */
-    color: #4b3c32; /* Dark brown text */
+    padding: 20px;
 }
 
-/* Header Styles */
+/* Header styles */
 header {
-    background: linear-gradient(to right, #8d5b3d, #a86d54); /* Brown gradient */
-    color: #ffffff;
-    padding: 20px 0;
+    background-color: #d7ccc8; /* Light brown header */
+    padding: 20px;
     text-align: center;
-}
-
-/* Navigation Styles */
-nav ul {
-    list-style-type: none;
-    padding: 10px 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffdd57; /* Change color on hover */
-}
-
-/* Main Section Styles */
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-section {
-    background: #ffffff;
     border-radius: 8px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Navigation styles */
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #3e2723; /* Dark brown link color */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #bcaaa4; /* Light brown hover effect */
+}
+
+/* Main content styles */
+main {
+    margin: 20px 0;
     padding: 20px;
+    background-color: #ffffff; /* White background for main content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section styles */
+section {
     margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-    color: #8d5b3d; /* Brown color for headings */
-    border-bottom: 2px solid #8d5b3d;
-    padding-bottom: 10px;
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #5d4037; /* A slightly darker brown */
 }
 
-section p {
-    margin-top: 10px;
-}
-
-/* Footer Styles */
+/* Footer styles */
 footer {
     text-align: center;
-    padding: 10px;
-    background: #4b3c32; /* Dark brown footer */
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 10px 0;
+    background-color: #d7ccc8; /* Same as header */
     margin-top: 20px;
+    border-radius: 8px;
 }
