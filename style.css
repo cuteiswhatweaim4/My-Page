@@ -9,7 +9,7 @@ header {
     position: relative;
     text-align: center;
     padding: 50px;
-    background-image: url('https://header-image.jpg'); /* Your original background image */
+    background-image: url('images/header-image.jpg'); /* Background image */
     background-size: cover; /* Cover the entire header area */
     background-position: center; /* Center the image */
     color: white; /* Text color */
@@ -58,4 +58,8 @@ h2 {
 p {
     line-height: 1.6; /* Improve readability */
     color: #555; /* Gray text color */
+}
+
+.hidden {
+    display: none; /* Hide sections initially */
 }
