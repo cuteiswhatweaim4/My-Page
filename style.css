@@ -49,14 +49,15 @@ section {
     padding: 20px;
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
 }
 
 section img {
-    width: 100%; /* Responsive image */
-    max-width: 100%; /* Limit maximum size to parent container */
+    width: 40%; /* Set image width */
+    max-width: 250px; /* Limit maximum size */
     height: auto; /* Maintain aspect ratio */
-    margin: 20px 0; /* Center the image */
-    display: block; /* Block element */
+    margin-right: 20px; /* Spacing between image and text */
 }
 
 h2 {
@@ -81,5 +82,16 @@ footer {
     nav ul li {
         display: block; /* Stack items vertically */
         margin: 10px 0; /* Spacing between items */
+    }
+
+    section {
+        flex-direction: column; /* Stack image above text on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    section img {
+        width: 100%; /* Make image full width on small screens */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add bottom margin */
     }
 }
