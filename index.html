@@ -5,40 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Knowledge Hub</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f5f5f5; }
+        header, nav, footer { text-align: center; padding: 20px; }
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { display: inline; margin: 0 15px; }
+        #content { margin-top: 20px; }
+    </style>
 </head>
 <body>
     <header>
         <h1>Welcome to My Knowledge Hub</h1>
     </header>
 
-    <section>
-        <h2>Interesting Facts</h2>
-        <img src="https://github.com/cuteiswhatweaim4/My-Page/raw/main/images/pexels-fauxels-3184460.jpg" alt="A visual representation related to knowledge" style="width:100%; max-width:600px;">
-        <p>Here’s an interesting fact about technology: Did you know that the first computer was invented in the 1940s and was called the ENIAC? It weighed over 30 tons!</p>
-    </section>
-
-    <section>
-        <h2>Explore Ideas</h2>
-        <p>Here are some innovative ideas to consider:</p>
+    <nav>
         <ul>
-            <li>Leveraging technology for education</li>
-            <li>Implementing green technologies</li>
-            <li>Exploring the future of artificial intelligence</li>
+            <li><a href="#" onclick="showContent('quantum')">Quantum Computing</a></li>
+            <li><a href="#" onclick="showContent('blockchain')">Blockchain Technology</a></li>
+            <li><a href="#" onclick="showContent('ar')">Augmented Reality</a></li>
         </ul>
-    </section>
+    </nav>
 
-    <section>
-        <h2>Technological Trends</h2>
-        <p>Stay updated with the latest technological advancements, such as:</p>
-        <ul>
-            <li>Quantum computing</li>
-            <li>Blockchain technology</li>
-            <li>Augmented reality</li>
-        </ul>
-    </section>
+    <div id="content">
+        <p>Select a topic to learn more.</p>
+    </div>
 
     <footer>
         <p>&copy; 2024 Your Name</p>
     </footer>
+
+    <script>
+        function showContent(topic) {
+            const contentDiv = document.getElementById('content');
+            if (topic === 'quantum') {
+                contentDiv.innerHTML = '<h2>Quantum Computing</h2><p>Quantum computing is a type of computation that uses quantum bits (qubits) to perform operations on data. It has the potential to solve complex problems much faster than classical computers.</p>';
+            } else if (topic === 'blockchain') {
+                contentDiv.innerHTML = '<h2>Blockchain Technology</h2><p>Blockchain technology is a decentralized digital ledger that records transactions across many computers securely and transparently.</p>';
+            } else if (topic === 'ar') {
+                contentDiv.innerHTML = '<h2>Augmented Reality</h2><p>Augmented reality (AR) is an interactive experience where digital information is overlaid on the real world, enhancing the user\'s perception and interaction with their environment.</p>';
+            }
+        }
+    </script>
 </body>
 </html>
