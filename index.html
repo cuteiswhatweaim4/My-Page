@@ -18,18 +18,24 @@
     <main>
         <section id="quantum">
             <h2>Quantum Computing</h2>
-            <img src="images/quantum.jpg" alt="Illustration of Quantum Computing Concepts">
-            <p>Quantum computing uses quantum bits (qubits) that can exist in multiple states simultaneously, enabling processing capabilities beyond classical computers.</p>
+            <div class="content">
+                <img src="images/quantum.jpg" alt="Illustration of Quantum Computing Concepts">
+                <p>Quantum computing uses quantum bits (qubits) that can exist in multiple states simultaneously, enabling processing capabilities beyond classical computers.</p>
+            </div>
         </section>
         <section id="blockchain">
             <h2>Blockchain Technology</h2>
-            <img src="images/blockchain.jpg" alt="Visual Representation of Blockchain Technology">
-            <p>Blockchain is a decentralized digital ledger that records transactions across many computers, ensuring security and immutability.</p>
+            <div class="content">
+                <img src="images/blockchain.jpg" alt="Visual Representation of Blockchain Technology">
+                <p>Blockchain is a decentralized digital ledger that records transactions across many computers, ensuring security and immutability.</p>
+            </div>
         </section>
         <section id="augmented">
             <h2>Augmented Reality</h2>
-            <img src="images/augmented.jpg" alt="Augmented Reality Application Example">
-            <p>Augmented reality (AR) overlays digital information onto the real world, enhancing user experiences in gaming, education, and various industries.</p>
+            <div class="content">
+                <img src="images/augmented.jpg" alt="Augmented Reality Application Example">
+                <p>Augmented reality (AR) overlays digital information onto the real world, enhancing user experiences in gaming, education, and various industries.</p>
+            </div>
         </section>
     </main>
     <footer>
@@ -38,8 +44,10 @@
     <script>
         document.querySelectorAll('nav ul li a').forEach(link => {
             link.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                e.preventDefault(); // Prevent default anchor behavior
+                const targetId = this.getAttribute('href'); // Get the target ID
+                const targetElement = document.querySelector(targetId); // Select the target element
+                targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly to the target element
             });
         });
     </script>
