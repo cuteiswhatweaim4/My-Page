@@ -2,15 +2,15 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f8f0e3; /* Light background for aesthetics */
-    color: #4e3b2b; /* Dark brown text for contrast */
+    background-color: #fce4e4; /* Light red background */
+    color: #5c0e0e; /* Dark red text for contrast */
     margin: 0;
     padding: 0;
 }
 
 /* Header Styles */
 header {
-    background: #d3c6b0; /* Light brown header */
+    background: #f9c2c2; /* Light red header */
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -27,7 +27,7 @@ nav {
 }
 
 nav a {
-    color: #4e3b2b; /* Dark brown links */
+    color: #5c0e0e; /* Dark red links */
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -53,8 +53,8 @@ section {
 }
 
 section h2 {
-    color: #4e3b2b; /* Dark brown for section titles */
-    border-bottom: 2px solid #d3c6b0; /* Subtle underline */
+    color: #5c0e0e; /* Dark red for section titles */
+    border-bottom: 2px solid #f9c2c2; /* Subtle underline */
     padding-bottom: 10px;
 }
 
@@ -66,7 +66,7 @@ section p {
 footer {
     text-align: center;
     padding: 20px;
-    background: #d3c6b0; /* Light brown footer */
+    background: #f9c2c2; /* Light red footer */
     position: relative;
     bottom: 0;
     width: 100%;
