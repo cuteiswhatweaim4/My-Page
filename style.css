@@ -1,29 +1,73 @@
-/* Background and main color theme */
 body {
-    background-color: #E0F7FA; /* light blue background */
-    color: #0277BD; /* dark blue for text */
     font-family: Arial, sans-serif;
+    background-color: #fffbe6; /* Light yellow background */
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-/* Header Styling */
 header {
-    background-color: #81D4FA; /* lighter blue */
-    color: #01579B;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
+    background-color: #ffd966; /* Soft yellow */
 }
 
-/* Button Styling */
-button {
-    background-color: #29B6F6; /* button blue */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+.header-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
 }
 
-button:hover {
-    background-color: #0288D1; /* darker blue on hover */
+nav {
+    background-color: #f1c232; /* Warm yellow */
+    padding: 15px;
 }
 
-/* Other sections and elements as needed */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #333333; /* Dark text for contrast */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffeb3b; /* Brighter yellow on hover */
+}
+
+#content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff8b0; /* Pale yellow */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.topic-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1c232; /* Matching warm yellow */
+    color: #333;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #333333;
+    text-decoration: none;
+}
