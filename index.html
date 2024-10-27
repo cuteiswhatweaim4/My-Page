@@ -3,39 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knowledge Facts, Ideas, and Technology</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <title>Knowledge Facts, Ideas & Technology</title>
 </head>
 <body>
     <header>
-        <h1>Knowledge, Facts, Ideas, and Technology</h1>
+        <h1>Knowledge Facts, Ideas & Technology</h1>
         <nav>
             <ul>
-                <li><a href="#quantum-computing">Quantum Computing</a></li>
-                <li><a href="#blockchain">Blockchain Technology</a></li>
-                <li><a href="#augmented-reality">Augmented Reality</a></li>
+                <li><a href="#" onclick="toggleContent('quantumContent')">Quantum Computing</a></li>
+                <li><a href="#" onclick="toggleContent('blockchainContent')">Blockchain Technology</a></li>
+                <li><a href="#" onclick="toggleContent('augmentedContent')">Augmented Reality</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="quantum-computing">
+        <section id="quantumContent" class="hidden">
             <h2>Quantum Computing</h2>
-            <img src="https://quantum.jpg" alt="Quantum Computing">
-            <p>Your detailed explanation about quantum computing...</p>
+            <img src="images/quantum.jpg" alt="Quantum Computing">
+            <p>Quantum computing harnesses the peculiar principles of quantum mechanics to perform computations much faster than classical computers.</p>
         </section>
-
-        <section id="blockchain">
+        <section id="blockchainContent" class="hidden">
             <h2>Blockchain Technology</h2>
-            <img src="https://blockchain.jpg" alt="Blockchain Technology">
-            <p>Your detailed explanation about blockchain technology...</p>
+            <img src="images/blockchain.jpg" alt="Blockchain Technology">
+            <p>Blockchain is a decentralized digital ledger that records transactions across many computers in such a way that the registered transactions cannot be altered retroactively.</p>
         </section>
-
-        <section id="augmented-reality">
+        <section id="augmentedContent" class="hidden">
             <h2>Augmented Reality</h2>
-            <img src="https://augmented.jpg" alt="Augmented Reality">
-            <p>Your detailed explanation about augmented reality...</p>
+            <img src="images/augmented.jpg" alt="Augmented Reality">
+            <p>Augmented reality (AR) is an interactive experience where real-world environments are enhanced by computer-generated perceptual information.</p>
         </section>
     </main>
+
+    <script>
+        function toggleContent(id) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                if (section.id === id) {
+                    section.classList.toggle('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
