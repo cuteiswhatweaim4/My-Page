@@ -14,8 +14,9 @@ header {
 }
 
 .header-image {
-    max-width: 100%;
+    max-width: 80%; /* Adjust to make the image smaller */
     height: auto;
+    margin: 0 auto; /* Center the image */
 }
 
 nav ul {
