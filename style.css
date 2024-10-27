@@ -1,27 +1,23 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FFF8E1; /* Light Yellow Background */
-    color: #4A4A4A; /* Dark Gray Text */
+    background-color: #f0f0f0; /* Light background */
 }
 
 header {
+    position: relative;
     text-align: center;
-    padding: 50px; /* More padding for a better layout */
-    background-image: url('https://your-image-url.jpg'); /* Replace with your header image URL */
+    padding: 50px;
+    background-image: url('https://header-image.jpg'); /* Your original background image */
     background-size: cover; /* Cover the entire header area */
     background-position: center; /* Center the image */
-    color: white; /* White text on header */
+    color: white; /* Text color */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
-    background-color: rgba(255, 193, 7, 0.8); /* Transparent Amber Background */
-    margin: 0;
 }
 
 nav ul li {
@@ -30,48 +26,36 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #fff; /* White Text */
-    font-weight: bold;
+    color: white; /* Link color */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main Content */
 main {
-    padding: 20px;
+    padding: 20px; /* Spacing around main content */
 }
 
-.topic-section {
-    margin-bottom: 40px;
-    background: rgba(255, 255, 255, 0.9); /* White background for better readability */
-    padding: 20px; /* Add padding around the topic */
-    border-radius: 10px; /* Rounded corners */
+section {
+    background: white; /* White background for sections */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* Animated Text */
-.animated-text {
-    animation: fadeIn 2s ease-in-out;
+section img {
+    width: 100%; /* Responsive image */
+    max-width: 600px; /* Limit maximum size */
+    height: auto; /* Keep aspect ratio */
+    margin: 0 auto; /* Center the image */
+    display: block; /* Block element */
 }
 
-/* Animation Keyframes */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+h2 {
+    color: #333; /* Darker color for section titles */
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #FFEB3B; /* Light Yellow Footer */
-    position: relative;
-    bottom: 0;
-    width: 100%;
+p {
+    line-height: 1.6; /* Improve readability */
+    color: #555; /* Gray text color */
 }
