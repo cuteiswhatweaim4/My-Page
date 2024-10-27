@@ -9,7 +9,7 @@ header {
     position: relative;
     text-align: center;
     padding: 50px;
-    background-image: url('images/header-image.jpg'); /* Background image */
+    background-image: url('header-image.jpg'); /* Your original header background image */
     background-size: cover; /* Cover the entire header area */
     background-position: center; /* Center the image */
     color: white; /* Text color */
@@ -60,6 +60,9 @@ p {
     color: #555; /* Gray text color */
 }
 
-.hidden {
-    display: none; /* Hide sections initially */
+/* Background color for the body */
+body {
+    background-image: url('header-image.jpg'); /* Ensure background fits screen */
+    background-size: cover; /* Cover entire page */
+    background-position: center; /* Center the background */
 }
