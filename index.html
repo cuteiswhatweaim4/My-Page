@@ -16,6 +16,7 @@
 <body>
     <header>
         <h1>Welcome to My Knowledge Hub</h1>
+        <img src="images/pexels-fauxels-3184460.jpg" alt="Knowledge Image" style="width: 100%; max-width: 600px;">
     </header>
 
     <nav>
@@ -38,11 +39,17 @@
         function showContent(topic) {
             const contentDiv = document.getElementById('content');
             if (topic === 'quantum') {
-                contentDiv.innerHTML = '<h2>Quantum Computing</h2><p>Quantum computing is a type of computation that uses quantum bits (qubits) to perform operations on data. It has the potential to solve complex problems much faster than classical computers.</p>';
+                contentDiv.innerHTML = `
+                    <h2>Quantum Computing</h2>
+                    <p>Quantum computing is a type of computation that uses quantum bits (qubits) to perform operations on data. It has the potential to solve complex problems much faster than classical computers.</p>`;
             } else if (topic === 'blockchain') {
-                contentDiv.innerHTML = '<h2>Blockchain Technology</h2><p>Blockchain technology is a decentralized digital ledger that records transactions across many computers securely and transparently.</p>';
+                contentDiv.innerHTML = `
+                    <h2>Blockchain Technology</h2>
+                    <p>Blockchain technology is a decentralized digital ledger that records transactions across many computers securely and transparently.</p>`;
             } else if (topic === 'ar') {
-                contentDiv.innerHTML = '<h2>Augmented Reality</h2><p>Augmented reality (AR) is an interactive experience where digital information is overlaid on the real world, enhancing the user\'s perception and interaction with their environment.</p>';
+                contentDiv.innerHTML = `
+                    <h2>Augmented Reality</h2>
+                    <p>Augmented reality (AR) is an interactive experience where digital information is overlaid on the real world, enhancing the user's perception and interaction with their environment.</p>`;
             }
         }
     </script>
