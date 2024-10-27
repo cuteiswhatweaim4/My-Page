@@ -4,101 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Knowledge Hub</title>
+    <title>Knowledge Facts and Ideas</title>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Knowledge Hub</h1>
-        <img src="images/pexels-fauxels-3184460.jpg" alt="Knowledge Image" class="header-image">
+        <h1>Welcome to Knowledge Facts</h1>
+        <img src="images/pexels-fauxels-3184460.jpg" alt="Knowledge" class="header-image">
     </header>
-
     <nav>
         <ul>
-            <li><a href="#" onclick="showContent('quantum')">Quantum Computing</a></li>
-            <li><a href="#" onclick="showContent('blockchain')">Blockchain Technology</a></li>
-            <li><a href="#" onclick="showContent('ar')">Augmented Reality</a></li>
-            <li><a href="#" onclick="showContent('ai')">Artificial Intelligence</a></li>
-            <li><a href="#" onclick="showContent('vr')">Virtual Reality</a></li>
+            <li><a href="#quantum">Quantum Computing</a></li>
+            <li><a href="#blockchain">Blockchain Technology</a></li>
+            <li><a href="#augmented">Augmented Reality</a></li>
         </ul>
     </nav>
-
     <div id="content">
-        <p>Select a topic to learn more.</p>
+        <section id="quantum">
+            <h2 class="animated-text">Quantum Computing</h2>
+            <img src="images/quantum.jpg" alt="Quantum Computing" class="topic-image">
+            <p>
+                Quantum computing is a revolutionary technology that utilizes the principles of quantum mechanics to process information. Unlike classical computers, which use bits as the smallest unit of data, quantum computers use quantum bits or qubits. This allows them to perform complex calculations at unprecedented speeds, making them particularly suited for tasks like cryptography, optimization problems, and simulations of quantum systems.
+            </p>
+            <p>
+                The key advantage of quantum computing lies in its ability to perform multiple calculations simultaneously through a phenomenon known as superposition. Furthermore, quantum entanglement enables qubits that are entangled to be correlated with each other, providing enhanced processing capabilities.
+            </p>
+        </section>
+        <section id="blockchain">
+            <h2 class="animated-text">Blockchain Technology</h2>
+            <img src="images/blockchain.jpg" alt="Blockchain Technology" class="topic-image">
+            <p>
+                Blockchain technology is a decentralized digital ledger system that records transactions across many computers in a way that ensures the security and transparency of the data. Each block in the blockchain contains a list of transactions, and once a block is filled, it is added to the chain in a linear, chronological order. This structure makes it incredibly difficult to alter any single block without changing all subsequent blocks, thus providing high levels of security.
+            </p>
+            <p>
+                Blockchain technology is best known for its role in powering cryptocurrencies like Bitcoin and Ethereum. However, its potential applications extend far beyond digital currencies. It can be utilized in supply chain management, secure voting systems, and even in creating smart contracts that automatically execute transactions when certain conditions are met.
+            </p>
+        </section>
+        <section id="augmented">
+            <h2 class="animated-text">Augmented Reality</h2>
+            <img src="images/augmented.jpg" alt="Augmented Reality" class="topic-image">
+            <p>
+                Augmented Reality (AR) is an interactive experience that combines the real world with computer-generated content. Unlike Virtual Reality (VR), which creates a completely immersive digital environment, AR overlays digital information onto the physical world. This technology is commonly used in applications such as gaming, education, and retail.
+            </p>
+            <p>
+                One popular example of AR is the mobile game Pokémon Go, where players can interact with virtual characters superimposed onto their real-world environment. AR has the potential to revolutionize fields like healthcare, where it can assist in complex surgeries, and education, where it can provide interactive learning experiences.
+            </p>
+        </section>
     </div>
-
     <footer>
-        <p>&copy; 2024 Your Name</p>
-        <p><a href="https://github.com/cuteiswhatweaim4/My-Page" target="_blank">View Source Code on GitHub</a></p>
+        <p>&copy; 2024 Knowledge Facts and Ideas. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        function showContent(topic) {
-            const contentDiv = document.getElementById('content');
-            let content = '';
-
-            if (topic === 'quantum') {
-                content = `
-                    <h2>Quantum Computing</h2>
-                    <img src="images/quantum.jpg" alt="Quantum Computing" class="topic-image">
-                    <p>Quantum computing is a type of computation that uses quantum bits (qubits) to perform operations on data. It has the potential to solve complex problems much faster than classical computers.</p>
-                    <h3>Key Concepts:</h3>
-                    <ul>
-                        <li><strong>Superposition:</strong> Qubits can exist in multiple states simultaneously.</li>
-                        <li><strong>Entanglement:</strong> Qubits can be interdependent regardless of distance.</li>
-                        <li><strong>Quantum Algorithms:</strong> Algorithms like Shor’s and Grover’s can outperform classical algorithms.</li>
-                    </ul>
-                `;
-            } else if (topic === 'blockchain') {
-                content = `
-                    <h2>Blockchain Technology</h2>
-                    <img src="images/blockchain.jpg" alt="Blockchain Technology" class="topic-image">
-                    <p>Blockchain technology is a decentralized digital ledger that records transactions across many computers securely and transparently.</p>
-                    <h3>Key Features:</h3>
-                    <ul>
-                        <li><strong>Decentralization:</strong> No single point of control.</li>
-                        <li><strong>Security:</strong> Cryptographic principles ensure data integrity.</li>
-                        <li><strong>Transparency:</strong> Transactions are visible to all network participants.</li>
-                    </ul>
-                `;
-            } else if (topic === 'ar') {
-                content = `
-                    <h2>Augmented Reality</h2>
-                    <img src="images/ar.jpg" alt="Augmented Reality" class="topic-image">
-                    <p>Augmented reality (AR) is an interactive experience where digital information is overlaid on the real world, enhancing the user's perception and interaction with their environment.</p>
-                    <h3>Applications:</h3>
-                    <ul>
-                        <li>Gaming (e.g., Pokémon GO)</li>
-                        <li>Retail (e.g., virtual try-ons)</li>
-                        <li>Education (e.g., interactive learning experiences)</li>
-                    </ul>
-                `;
-            } else if (topic === 'ai') {
-                content = `
-                    <h2>Artificial Intelligence</h2>
-                    <img src="images/ai.jpg" alt="Artificial Intelligence" class="topic-image">
-                    <p>Artificial Intelligence (AI) refers to the simulation of human intelligence in machines designed to think and act like humans.</p>
-                    <h3>Types of AI:</h3>
-                    <ul>
-                        <li><strong>Narrow AI:</strong> Specialized in a specific task (e.g., voice assistants).</li>
-                        <li><strong>General AI:</strong> Hypothetical AI that can perform any intellectual task a human can do.</li>
-                    </ul>
-                `;
-            } else if (topic === 'vr') {
-                content = `
-                    <h2>Virtual Reality</h2>
-                    <img src="images/vr.jpg" alt="Virtual Reality" class="topic-image">
-                    <p>Virtual reality (VR) immerses users in a simulated environment, often through the use of VR headsets.</p>
-                    <h3>Uses of VR:</h3>
-                    <ul>
-                        <li>Gaming</li>
-                        <li>Training simulations</li>
-                        <li>Virtual tourism</li>
-                    </ul>
-                `;
-            }
-
-            contentDiv.innerHTML = content;
-        }
-    </script>
 </body>
 </html>
