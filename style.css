@@ -2,13 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* Light background */
+    background-color: #f0f0f0; /* Light background */
 }
 
 header {
+    position: relative;
     text-align: center;
-    padding: 20px;
-    background-color: #f1c40f; /* Aesthetic yellow background */
+    padding: 50px;
+    background-image: url('images/header-image.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire header area */
+    background-position: center; /* Center the image */
     color: white; /* Text color */
 }
 
@@ -18,7 +21,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
@@ -32,24 +35,21 @@ main {
     padding: 20px; /* Spacing around main content */
 }
 
-section {
+.content-section {
     background: white; /* White background for sections */
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
 }
 
-section img {
+.content-section img {
     width: 100%; /* Responsive image */
-    max-width: 600px; /* Limit maximum size */
+    max-width: 300px; /* Limit maximum size */
     height: auto; /* Keep aspect ratio */
-    margin: 0 auto; /* Center the image */
-    display: block; /* Block element */
-}
-
-.hidden {
-    display: none; /* Hide sections by default */
+    margin-right: 20px; /* Space between image and text */
 }
 
 h2 {
@@ -59,4 +59,26 @@ h2 {
 p {
     line-height: 1.6; /* Improve readability */
     color: #555; /* Gray text color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 20px; /* Less padding on mobile */
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation links */
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    .content-section {
+        flex-direction: column; /* Stack image and text on mobile */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .content-section img {
+        margin-right: 0; /* Remove margin on mobile */
+        margin-bottom: 10px; /* Add space below image */
+    }
 }
