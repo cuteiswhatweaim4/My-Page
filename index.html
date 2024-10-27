@@ -80,4 +80,20 @@
     </main>
 
     <footer>
-        <p>© 2024 Knowledge, Facts, Ideas, and Technology. All rights reserved.<
+        <p>© 2024 Knowledge, Facts, Ideas, and Technology. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleVisibility(topic) {
+            const sections = document.querySelectorAll('.topic-section');
+            sections.forEach(section => {
+                if (section.id === topic) {
+                    section.style.display = section.style.display === 'none' ? 'flex' : 'none';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
