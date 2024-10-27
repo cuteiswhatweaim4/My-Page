@@ -9,22 +9,18 @@ body {
 
 header {
     text-align: center;
-    padding: 10px;
-    background-color: #FFEB3B; /* Light Yellow Header */
-}
-
-.header-image {
-    max-width: 100%; /* Responsive width */
-    height: 100px; /* Set a fixed height for smaller image */
-    object-fit: cover; /* Maintain aspect ratio */
-    margin: 0 auto; /* Center the image */
+    padding: 50px; /* More padding for a better layout */
+    background-image: url('https://your-image-url.jpg'); /* Replace with your header image URL */
+    background-size: cover; /* Cover the entire header area */
+    background-position: center; /* Center the image */
+    color: white; /* White text on header */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
-    background-color: #FFC107; /* Amber Background */
+    background-color: rgba(255, 193, 7, 0.8); /* Transparent Amber Background */
     margin: 0;
 }
 
@@ -49,19 +45,11 @@ main {
 }
 
 .topic-section {
-    display: flex;
     margin-bottom: 40px;
-}
-
-.topic-image {
-    max-width: 300px; /* Keep image size manageable */
-    height: auto;
-    margin-right: 20px;
-    border-radius: 10px; /* Rounded Corners */
-}
-
-.topic-content {
-    flex: 1; /* Allows content to take remaining space */
+    background: rgba(255, 255, 255, 0.9); /* White background for better readability */
+    padding: 20px; /* Add padding around the topic */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Animated Text */
