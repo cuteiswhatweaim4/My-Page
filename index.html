@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore knowledge facts, ideas, and technology in quantum computing, blockchain, and augmented reality.">
     <title>Knowledge Facts, Ideas and Technology</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
@@ -17,29 +18,28 @@
     <main>
         <section id="quantum">
             <h2>Quantum Computing</h2>
-            <img src="images/quantum.jpg" alt="Quantum Computing Image">
-            <p>Quantum computing is a type of computing that uses quantum bits, or qubits, which can exist in multiple states simultaneously. This allows quantum computers to process information in ways that classical computers cannot.</p>
+            <img src="images/quantum.jpg" alt="Illustration of Quantum Computing Concepts">
+            <p>Quantum computing uses quantum bits (qubits) that can exist in multiple states simultaneously, enabling processing capabilities beyond classical computers.</p>
         </section>
         <section id="blockchain">
             <h2>Blockchain Technology</h2>
-            <img src="images/blockchain.jpg" alt="Blockchain Technology Image">
-            <p>Blockchain is a decentralized digital ledger that records transactions across many computers. It ensures that the recorded transactions cannot be altered retroactively, which adds a layer of security.</p>
+            <img src="images/blockchain.jpg" alt="Visual Representation of Blockchain Technology">
+            <p>Blockchain is a decentralized digital ledger that records transactions across many computers, ensuring security and immutability.</p>
         </section>
         <section id="augmented">
             <h2>Augmented Reality</h2>
-            <img src="images/augmented.jpg" alt="Augmented Reality Image">
-            <p>Augmented reality (AR) overlays digital information onto the real world, enhancing the user's experience. It has applications in gaming, education, and various industries.</p>
+            <img src="images/augmented.jpg" alt="Augmented Reality Application Example">
+            <p>Augmented reality (AR) overlays digital information onto the real world, enhancing user experiences in gaming, education, and various industries.</p>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2024 Knowledge Hub. All rights reserved.</p>
+    </footer>
     <script>
-        const links = document.querySelectorAll('nav ul li a');
-
-        links.forEach(link => {
+        document.querySelectorAll('nav ul li a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                targetElement.scrollIntoView({ behavior: 'smooth' });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
