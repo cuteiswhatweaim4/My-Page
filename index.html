@@ -3,53 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore knowledge facts, ideas, and technology in quantum computing, blockchain, and augmented reality.">
-    <title>Knowledge Facts, Ideas and Technology</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Style.css">
+    <title>Knowledge, Facts, Ideas, and Technology</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#quantum">Quantum Computing</a></li>
-            <li><a href="#blockchain">Blockchain Technology</a></li>
-            <li><a href="#augmented">Augmented Reality</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>Knowledge, Facts, Ideas, and Technology</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('quantum')">Quantum Computing</a></li>
+                <li><a href="#" onclick="showSection('blockchain')">Blockchain Technology</a></li>
+                <li><a href="#" onclick="showSection('augmented')">Augmented Reality</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <section id="quantum">
+        <section id="welcome">
+            <h2>Welcome to My Website</h2>
+            <p>Explore the latest in technology and innovative ideas. Click on the links above to learn more about each topic.</p>
+        </section>
+
+        <section id="quantum" class="hidden">
             <h2>Quantum Computing</h2>
-            <div class="content">
-                <img src="images/quantum.jpg" alt="Illustration of Quantum Computing Concepts">
-                <p>Quantum computing uses quantum bits (qubits) that can exist in multiple states simultaneously, enabling processing capabilities beyond classical computers.</p>
-            </div>
+            <img src="images/quantum.jpg" alt="Quantum Computing">
+            <p>Quantum computing is a rapidly emerging technology that harnesses the laws of quantum mechanics to process information in fundamentally different ways than traditional computers. It has the potential to solve complex problems that are currently intractable.</p>
+            <button onclick="hideSections()">Back</button>
         </section>
-        <section id="blockchain">
+
+        <section id="blockchain" class="hidden">
             <h2>Blockchain Technology</h2>
-            <div class="content">
-                <img src="images/blockchain.jpg" alt="Visual Representation of Blockchain Technology">
-                <p>Blockchain is a decentralized digital ledger that records transactions across many computers, ensuring security and immutability.</p>
-            </div>
+            <img src="images/blockchain.jpg" alt="Blockchain Technology">
+            <p>Blockchain technology is a decentralized digital ledger that records transactions across many computers securely and transparently. It is the foundation for cryptocurrencies and has applications in various fields such as finance, healthcare, and supply chain management.</p>
+            <button onclick="hideSections()">Back</button>
         </section>
-        <section id="augmented">
+
+        <section id="augmented" class="hidden">
             <h2>Augmented Reality</h2>
-            <div class="content">
-                <img src="images/augmented.jpg" alt="Augmented Reality Application Example">
-                <p>Augmented reality (AR) overlays digital information onto the real world, enhancing user experiences in gaming, education, and various industries.</p>
-            </div>
+            <img src="images/augmented.jpg" alt="Augmented Reality">
+            <p>Augmented reality (AR) enhances the real world with digital content, allowing users to interact with their environment in innovative ways. AR has applications in gaming, education, and various industries, providing immersive experiences.</p>
+            <button onclick="hideSections()">Back</button>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Knowledge Hub. All rights reserved.</p>
-    </footer>
+
     <script>
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent default anchor behavior
-                const targetId = this.getAttribute('href'); // Get the target ID
-                const targetElement = document.querySelector(targetId); // Select the target element
-                targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly to the target element
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('main > section');
+            sections.forEach(section => {
+                section.classList.add('hidden');
             });
-        });
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.remove('hidden');
+            }
+        }
+
+        function hideSections() {
+            const sections = document.querySelectorAll('main > section');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+            // Show the welcome section again
+            const welcomeSection = document.getElementById('welcome');
+            welcomeSection.classList.remove('hidden');
+        }
     </script>
 </body>
 </html>
