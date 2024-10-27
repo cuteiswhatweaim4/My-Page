@@ -1,103 +1,89 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styles */
+/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5dc; /* Light beige background */
-    color: #3e2723; /* Dark brown text */
     line-height: 1.6;
-    padding: 20px;
+    background-color: #f8f0e3; /* Light background for aesthetics */
+    color: #4e3b2b; /* Dark brown text for contrast */
+    margin: 0;
+    padding: 0;
 }
 
-/* Header styles */
+/* Header Styles */
 header {
-    background-color: #d7ccc8; /* Light brown header */
+    background: #d3c6b0; /* Light brown header */
     padding: 20px;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+header h1 {
+    margin: 0;
     font-size: 2.5em;
-    margin-bottom: 10px;
-    font-weight: bold;
 }
 
-/* Navigation styles */
+/* Navigation Styles */
 nav {
-    margin: 20px 0;
+    margin-top: 10px;
 }
 
 nav a {
-    color: #3e2723; /* Dark brown link color */
+    color: #4e3b2b; /* Dark brown links */
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
 nav a:hover {
-    background-color: #bcaaa4; /* Light brown hover effect */
-    color: #ffffff; /* White text on hover */
+    text-decoration: underline;
 }
 
-/* Main content styles */
+/* Main Content Styles */
 main {
-    margin: 20px 0;
     padding: 20px;
-    background-color: #ffffff; /* White background for main content */
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
 }
 
-/* Section styles */
 section {
-    margin-bottom: 20px;
-    padding: 15px;
-    border-left: 5px solid #3e2723; /* Dark brown left border */
-    background-color: #fefefe; /* Very light background for sections */
-    border-radius: 5px;
+    background: #ffffff; /* White background for sections */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #5d4037; /* A slightly darker brown */
+section h2 {
+    color: #4e3b2b; /* Dark brown for section titles */
+    border-bottom: 2px solid #d3c6b0; /* Subtle underline */
+    padding-bottom: 10px;
 }
 
-/* Add some spacing for paragraphs */
-p {
+section p {
     margin: 10px 0;
-    line-height: 1.8;
 }
 
-/* Footer styles */
+/* Footer Styles */
 footer {
     text-align: center;
-    padding: 10px 0;
-    background-color: #d7ccc8; /* Same as header */
-    margin-top: 20px;
-    border-radius: 8px;
+    padding: 20px;
+    background: #d3c6b0; /* Light brown footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-    
-    h1 {
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
         font-size: 2em;
     }
 
     nav a {
-        display: block;
-        margin: 5px 0;
+        margin: 0 10px;
+    }
+
+    section {
+        padding: 15px;
     }
 }
