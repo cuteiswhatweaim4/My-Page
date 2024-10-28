@@ -3,58 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knowledge, Facts, Ideas, and Technology</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Explore Knowledge, Facts, Ideas, and Technology</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
     <header>
-        <h1>Explore Knowledge, Facts, Ideas, and Technology</h1>
-    </header>
-
-    <main>
-        <div class="link-box">
-            <h2>Explore Topics</h2>
+        <h1>Welcome to Knowledge Explorer</h1>
+        <nav>
             <ul>
-                <li><a href="#" onclick="showContent('quantum'); return false;">Quantum Computing</a></li>
-                <li><a href="#" onclick="showContent('blockchain'); return false;">Blockchain Technology</a></li>
-                <li><a href="#" onclick="showContent('augmented'); return false;">Augmented Reality</a></li>
+                <li><a href="#knowledge">Knowledge</a></li>
+                <li><a href="#facts">Facts</a></li>
+                <li><a href="#ideas">Ideas</a></li>
+                <li><a href="#technology">Technology</a></li>
             </ul>
-        </div>
-
-        <section id="quantum" class="content-section" aria-hidden="true">
-            <button onclick="showHome()">Return Home</button>
-            <div class="section-content">
-                <img src="images/quantum.jpg" alt="Quantum Computing">
-                <div>
-                    <h2>Quantum Computing</h2>
-                    <p>Quantum computing is a type of computation that takes advantage of the quantum states of subatomic particles.</p>
-                </div>
-            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="knowledge">
+            <h2>Knowledge</h2>
+            <p>Discover a wealth of information on various topics.</p>
         </section>
-
-        <section id="blockchain" class="content-section" aria-hidden="true">
-            <button onclick="showHome()">Return Home</button>
-            <div class="section-content">
-                <img src="images/blockchain.jpg" alt="Blockchain Technology">
-                <div>
-                    <h2>Blockchain Technology</h2>
-                    <p>Blockchain technology is a decentralized digital ledger that records transactions across many computers.</p>
-                </div>
-            </div>
+        
+        <section id="facts">
+            <h2>Facts</h2>
+            <p>Explore interesting facts that will broaden your understanding.</p>
         </section>
-
-        <section id="augmented" class="content-section" aria-hidden="true">
-            <button onclick="showHome()">Return Home</button>
-            <div class="section-content">
-                <img src="images/augmented.jpg" alt="Augmented Reality">
-                <div>
-                    <h2>Augmented Reality</h2>
-                    <p>Augmented reality is an interactive experience where digital information is overlaid on the real world.</p>
-                </div>
-            </div>
+        
+        <section id="ideas">
+            <h2>Ideas</h2>
+            <p>Find inspiration and innovative ideas to fuel your creativity.</p>
+        </section>
+        
+        <section id="technology">
+            <h2>Technology</h2>
+            <p>Stay updated with the latest in technology and innovations.</p>
         </section>
     </main>
-
-    <script src="app.js"></script>
+    
+    <footer>
+        <p>&copy; 2024 Knowledge Explorer. All rights reserved.</p>
+    </footer>
 </body>
 </html>
