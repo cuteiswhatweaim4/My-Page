@@ -1,60 +1,97 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('images/new-background.jpg'); /* Replace with your new background image */
-    background-size: cover; /* Make the background cover the entire screen */
-    background-position: center; /* Center the background */
-    background-attachment: fixed; /* Keeps background fixed on scroll */
-    color: #333; /* Adjust text color for contrast */
+    background-color: #f0f0f0;
 }
 
+/* Header with Background Image */
 header {
     text-align: center;
     padding: 50px;
-    color: white; /* Text color */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background to enhance text readability */
+    background-image: url('images/header-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+header h1 {
+    font-size: 2em;
 }
 
-nav ul li {
+/* Home Sections - Large Clickable Links */
+#home-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+
+#home-sections a {
     display: inline-block;
-    margin: 0 15px;
+    margin: 20px;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-nav ul li a {
-    color: white; /* Link color */
-    text-decoration: none; /* No underline */
-    font-weight: bold; /* Bold text */
+#home-sections a:hover {
+    background-color: #c0c0c0;
+    transform: scale(1.05);
 }
 
-main {
-    padding: 20px; /* Spacing around main content */
-    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
-    border-radius: 8px;
-    max-width: 1000px;
-    margin: auto;
-}
-
+/* Content Sections (Hidden by Default) */
 .content-section {
-    background: white;
-    margin: 20px 0;
+    display: none;
     padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
+    text-align: left;
 }
 
 .content-section img {
     width: 100%;
     max-width: 300px;
     height: auto;
-    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.content-section h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+.content-section p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Return Home Button */
+#return-home {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#return-home:hover {
+    background-color: #555;
 }
 
 /* Responsive Styles */
@@ -63,18 +100,17 @@ main {
         padding: 20px;
     }
 
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+    #home-sections a {
+        padding: 15px 30px;
+        font-size: 1.2em;
     }
 
     .content-section {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 15px;
     }
 
     .content-section img {
-        margin-right: 0;
-        margin-bottom: 10px;
+        max-width: 100%;
+        margin-bottom: 15px;
     }
 }
