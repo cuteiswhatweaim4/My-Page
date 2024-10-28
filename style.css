@@ -22,8 +22,8 @@ nav ul {
 }
 
 nav ul li {
-    display: block; /* Stack navigation links */
-    margin: 10px 0; /* Adjust margin */
+    display: inline-block; /* Horizontal layout for navigation */
+    margin: 10px 15px; /* Adjust margin */
 }
 
 nav ul li a {
@@ -62,9 +62,29 @@ h2 {
     border-radius: 8px; /* Rounded corners */
 }
 
-p {
-    line-height: 1.6; /* Improve readability */
-    color: #555; /* Gray text color */
+/* Main Page Styles */
+.main-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center links */
+    margin: 20px; /* Margin around links */
+}
+
+.main-links a {
+    display: block; /* Make link block-level */
+    margin: 10px 0; /* Margin between links */
+    padding: 15px; /* Padding for clickable area */
+    background: rgba(255, 255, 255, 0.8); /* Light background */
+    color: #333; /* Dark text color */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center text */
+    width: 250px; /* Fixed width for consistency */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.main-links a:hover {
+    background: rgba(0, 0, 0, 0.1); /* Change background on hover */
 }
 
 /* Responsive Styles */
@@ -78,13 +98,7 @@ p {
         margin: 10px 0; /* Adjust margin */
     }
 
-    .content-section {
-        flex-direction: column; /* Stack image and text on mobile */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .content-section img {
-        margin-right: 0; /* Remove margin on mobile */
-        margin-bottom: 10px; /* Add space below image */
+    .section-box {
+        padding: 15px; /* Less padding in sections on mobile */
     }
 }
