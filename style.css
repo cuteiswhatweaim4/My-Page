@@ -40,10 +40,12 @@ main {
     padding: 20px;
     max-width: 1200px; /* Max width for larger screens */
     margin: auto; /* Centering the main content */
+    background: #f8faff; /* Light blue background for the main area */
+    border-radius: 10px; /* Rounded corners */
 }
 
 section {
-    background: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+    background: #ffffff; /* White background for sections */
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
@@ -60,7 +62,7 @@ section h2 {
 }
 
 section img {
-    max-width: 100%; /* Responsive images */
+    max-width: 80%; /* Resize image to occupy 80% of the section width */
     height: auto;
     border-radius: 10px;
     display: block; /* Centers the image */
