@@ -5,11 +5,13 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #eef2f3;
+    background: url('https://via.placeholder.com/1920x1080?text=Background+Image') no-repeat center center fixed; /* Background image */
+    background-size: cover;
+    color: #333;
 }
 
 header {
-    background: #35424a;
+    background: rgba(53, 66, 74, 0.8);
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -36,11 +38,11 @@ main {
 }
 
 section {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.9);
     margin: 20px 0;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 section img {
@@ -52,7 +54,7 @@ section img {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #35424a;
+    background: rgba(53, 66, 74, 0.8);
     color: #ffffff;
     position: relative;
     bottom: 0;
