@@ -11,7 +11,7 @@
         <h1>Explore Knowledge, Facts, Ideas, and Technology</h1>
     </header>
 
-    <nav>
+    <nav aria-label="Main Navigation">
         <ul>
             <li><a href="#quantum" onclick="showContent('quantum')">Quantum Computing</a></li>
             <li><a href="#blockchain" onclick="showContent('blockchain')">Blockchain Technology</a></li>
@@ -26,20 +26,20 @@
             <a href="#augmented" onclick="showContent('augmented')">Augmented Reality</a>
         </div>
 
-        <section id="quantum" class="section-box" style="display: none;">
+        <article id="quantum" class="section-box" style="display: none;">
             <h2>Quantum Computing</h2>
             <p>Quantum computing is a type of computation that takes advantage of the quantum states of subatomic particles.</p>
-        </section>
+        </article>
 
-        <section id="blockchain" class="section-box" style="display: none;">
+        <article id="blockchain" class="section-box" style="display: none;">
             <h2>Blockchain Technology</h2>
             <p>Blockchain technology is a decentralized digital ledger that records transactions across many computers.</p>
-        </section>
+        </article>
 
-        <section id="augmented" class="section-box" style="display: none;">
+        <article id="augmented" class="section-box" style="display: none;">
             <h2>Augmented Reality</h2>
             <p>Augmented reality is an interactive experience where digital information is overlaid on the real world.</p>
-        </section>
+        </article>
     </main>
 
     <script src="app.js"></script>
