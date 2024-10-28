@@ -2,45 +2,42 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('images/background.jpg') no-repeat center center fixed; /* Background image for the entire screen */
-    background-size: cover; /* Cover the entire background */
+    background-image: url('images/background.jpg'); /* New background image for the body */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the image */
 }
 
 header {
     text-align: center;
     padding: 50px;
     color: white; /* Text color */
-    z-index: 1;
-    position: relative; /* Relative positioning */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for header */
 }
 
-.nav-box {
-    text-align: center;
-    padding: 20px; /* Spacing around navigation */
+.main-links {
+    text-align: center; /* Center align the links */
+    margin: 20px; /* Margin around the section */
 }
 
-.nav-box ul {
-    list-style-type: none;
-    padding: 0;
+.link-box {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center the links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
-.nav-box ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-.nav-box ul li a {
-    display: inline-block;
-    padding: 15px 25px; /* Padding for larger clickable area */
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for links */
+.topic-link {
+    display: inline-block; /* Block level link */
+    padding: 20px; /* Padding around links */
+    margin: 10px; /* Space between links */
+    background: rgba(255, 255, 255, 0.8); /* Light background */
     color: #333; /* Dark text color */
     text-decoration: none; /* No underline */
-    font-weight: bold; /* Bold text */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 10px; /* Rounded corners */
+    transition: background 0.3s; /* Smooth transition */
 }
 
-main {
-    padding: 20px; /* Spacing around main content */
+.topic-link:hover {
+    background: rgba(255, 255, 255, 1); /* Change background on hover */
 }
 
 .content-section {
@@ -55,7 +52,7 @@ main {
 
 .content-section img {
     width: 100%; /* Responsive image */
-    max-width: 300px; /* Limit maximum size */
+    max-width: 400px; /* Limit maximum size */
     height: auto; /* Keep aspect ratio */
     margin-right: 20px; /* Space between image and text */
 }
@@ -69,15 +66,25 @@ p {
     color: #555; /* Gray text color */
 }
 
+.return-button {
+    margin-bottom: 20px; /* Space below button */
+    padding: 10px 15px; /* Button padding */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.return-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     header {
         padding: 20px; /* Less padding on mobile */
-    }
-
-    .nav-box ul li {
-        display: block; /* Stack navigation links */
-        margin: 10px 0; /* Adjust margin */
     }
 
     .content-section {
