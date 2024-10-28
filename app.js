@@ -1,21 +1,15 @@
-function showContent(section) {
-    // Hide all sections
-    const sections = document.querySelectorAll('main > article');
-    sections.forEach((sec) => {
-        sec.style.display = 'none';
+function showContent(topic) {
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+        section.style.display = 'none'; // Hide all sections
     });
-
-    // Show the clicked section
-    const selectedSection = document.getElementById(section);
-    if (selectedSection) {
-        selectedSection.style.display = 'block';
-    }
+    document.getElementById(topic).style.display = 'block'; // Show selected section
 }
 
-// Optional: Show the first section by default
-document.addEventListener('DOMContentLoaded', () => {
-    const firstSection = document.querySelector('main > article');
-    if (firstSection) {
-        firstSection.style.display = 'block';
-    }
-});
+function showHome() {
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+        section.style.display = 'none'; // Hide all sections
+    });
+    document.querySelector('.link-box').style.display = 'block'; // Show link box
+}
