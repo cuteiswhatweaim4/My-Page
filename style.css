@@ -55,14 +55,14 @@ section {
 }
 
 section img {
-    max-width: 40%; /* Resize image to occupy 40% of the section width */
-    height: auto;
+    max-width: 25%; /* Resize image to occupy 25% of the section width */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
     margin-right: 20px; /* Space between image and text */
 }
 
 section div {
-    max-width: 60%; /* Limit text width */
+    max-width: 70%; /* Limit text width */
 }
 
 section h2 {
