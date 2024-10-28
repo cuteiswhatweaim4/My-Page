@@ -3,11 +3,11 @@ function showContent(topic) {
     sections.forEach(section => {
         section.style.display = 'none'; // Hide all sections
     });
-    
+
     if (topic === 'home') {
-        document.querySelector('.main-links').style.display = 'block'; // Show main links
+        document.querySelector('.link-box').style.display = 'flex'; // Show links
     } else {
-        document.querySelector('.main-links').style.display = 'none'; // Hide main links
+        document.querySelector('.link-box').style.display = 'none'; // Hide links
         document.getElementById(topic).style.display = 'block'; // Show selected section
     }
 }
