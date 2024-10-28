@@ -12,36 +12,31 @@
     </header>
 
     <main>
-        <!-- Main Page with Large Clickable Sections -->
-        <div id="home-sections">
-            <a href="#quantum" data-section="quantum">Quantum Computing</a>
-            <a href="#blockchain" data-section="blockchain">Blockchain Technology</a>
-            <a href="#augmented" data-section="augmented">Augmented Reality</a>
+        <div class="nav-box">
+            <ul>
+                <li><a href="#quantum" onclick="showContent('quantum')">Quantum Computing</a></li>
+                <li><a href="#blockchain" onclick="showContent('blockchain')">Blockchain Technology</a></li>
+                <li><a href="#augmented" onclick="showContent('augmented')">Augmented Reality</a></li>
+            </ul>
         </div>
 
-        <!-- Sections with Return Button -->
         <section id="quantum" class="content-section" style="display: none;">
-            <button id="return-home">Return to Home</button>
             <img src="images/quantum.jpg" alt="Quantum Computing">
             <h2>Quantum Computing</h2>
             <p>Quantum computing is a type of computation that takes advantage of the quantum states of subatomic particles.</p>
         </section>
 
         <section id="blockchain" class="content-section" style="display: none;">
-            <button id="return-home">Return to Home</button>
             <img src="images/blockchain.jpg" alt="Blockchain Technology">
             <h2>Blockchain Technology</h2>
             <p>Blockchain technology is a decentralized digital ledger that records transactions across many computers.</p>
         </section>
 
         <section id="augmented" class="content-section" style="display: none;">
-            <button id="return-home">Return to Home</button>
             <img src="images/augmented.jpg" alt="Augmented Reality">
             <h2>Augmented Reality</h2>
             <p>Augmented reality is an interactive experience where digital information is overlaid on the real world.</p>
         </section>
     </main>
-
-    <script src="app.js"></script>
 </body>
 </html>
