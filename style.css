@@ -54,18 +54,18 @@ section {
 
 .section-content {
     display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
+    align-items: flex-start; /* Align items to the start */
 }
 
 section img {
-    max-width: 30%; /* Set a reasonable max-width for images */
+    max-width: 25%; /* Set a reasonable max-width for images */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Rounded corners for aesthetics */
     margin-right: 20px; /* Space between image and text */
 }
 
 section div {
-    max-width: 65%; /* Limit text width for readability */
+    max-width: 70%; /* Limit text width for readability */
     padding: 15px; /* Add padding for text area */
 }
 
