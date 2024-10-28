@@ -50,23 +50,23 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s; /* Animation on hover */
+    display: flex; /* Flexbox for side-by-side layout */
+    align-items: center; /* Center items vertically */
 }
 
-section:hover {
-    transform: scale(1.02); /* Slight zoom on hover */
+section img {
+    max-width: 40%; /* Resize image to occupy 40% of the section width */
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px; /* Space between image and text */
+}
+
+section div {
+    max-width: 60%; /* Limit text width */
 }
 
 section h2 {
     color: #3498db; /* Lighter blue for headings */
-}
-
-section img {
-    max-width: 80%; /* Resize image to occupy 80% of the section width */
-    height: auto;
-    border-radius: 10px;
-    display: block; /* Centers the image */
-    margin: 0 auto 15px; /* Margin at the bottom for spacing */
 }
 
 button {
@@ -101,8 +101,16 @@ footer {
     }
 
     section {
-        margin: 10px 0; /* Adjust margins for smaller screens */
-        padding: 15px; /* Reduce padding */
+        flex-direction: column; /* Stack image and text on smaller screens */
+    }
+
+    section img {
+        max-width: 100%; /* Full width for images on mobile */
+        margin: 0 0 15px; /* Adjust margin */
+    }
+
+    section div {
+        max-width: 100%; /* Full width for text on mobile */
     }
 
     button {
