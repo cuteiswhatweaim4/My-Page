@@ -13,6 +13,7 @@ header {
     background-size: cover; /* Cover the entire header area */
     background-position: center; /* Center the image */
     color: white; /* Text color */
+    min-height: 60vh; /* Minimum height to ensure coverage on desktop */
 }
 
 nav ul {
@@ -65,6 +66,7 @@ p {
 @media (max-width: 768px) {
     header {
         padding: 20px; /* Less padding on mobile */
+        min-height: 40vh; /* Reduce min-height for smaller screens */
     }
 
     nav ul li {
