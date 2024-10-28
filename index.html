@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knowledge, Facts, Ideas, and Technology</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -12,34 +12,31 @@
     </header>
 
     <main>
-        <section class="main-links">
-            <h2>Topics to Explore</h2>
-            <div class="link-box">
-                <a href="#quantum" onclick="showContent('quantum')" class="topic-link">Quantum Computing</a>
-                <a href="#blockchain" onclick="showContent('blockchain')" class="topic-link">Blockchain Technology</a>
-                <a href="#augmented" onclick="showContent('augmented')" class="topic-link">Augmented Reality</a>
-            </div>
-        </section>
+        <div class="link-box">
+            <a href="#quantum" onclick="showContent('quantum')">Quantum Computing</a>
+            <a href="#blockchain" onclick="showContent('blockchain')">Blockchain Technology</a>
+            <a href="#augmented" onclick="showContent('augmented')">Augmented Reality</a>
+        </div>
 
         <section id="quantum" class="content-section" style="display: none;">
-            <button onclick="showContent('home')" class="return-button">Return Home</button>
-            <img src="images/quantum.jpg" alt="Quantum Computing">
             <h2>Quantum Computing</h2>
             <p>Quantum computing is a type of computation that takes advantage of the quantum states of subatomic particles.</p>
+            <img src="images/quantum.jpg" alt="Quantum Computing">
+            <button class="return-button" onclick="showContent('home')">Return Home</button>
         </section>
 
         <section id="blockchain" class="content-section" style="display: none;">
-            <button onclick="showContent('home')" class="return-button">Return Home</button>
-            <img src="images/blockchain.jpg" alt="Blockchain Technology">
             <h2>Blockchain Technology</h2>
             <p>Blockchain technology is a decentralized digital ledger that records transactions across many computers.</p>
+            <img src="images/blockchain.jpg" alt="Blockchain Technology">
+            <button class="return-button" onclick="showContent('home')">Return Home</button>
         </section>
 
         <section id="augmented" class="content-section" style="display: none;">
-            <button onclick="showContent('home')" class="return-button">Return Home</button>
-            <img src="images/augmented.jpg" alt="Augmented Reality">
             <h2>Augmented Reality</h2>
             <p>Augmented reality is an interactive experience where digital information is overlaid on the real world.</p>
+            <img src="images/augmented.jpg" alt="Augmented Reality">
+            <button class="return-button" onclick="showContent('home')">Return Home</button>
         </section>
     </main>
 
