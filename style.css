@@ -6,7 +6,7 @@ body {
     background-color: #f0f0f0; /* Light background */
 }
 
-/* Header with background image for the main page only */
+/* Header styling */
 header {
     position: relative;
     text-align: center;
@@ -19,20 +19,38 @@ header {
 }
 
 /* Navigation styles */
+.nav-box {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the box */
+    margin: 20px; /* Space around the nav box */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Remove default margin */
+    display: flex; /* Align links in a row */
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 15px;
+    margin: 0 20px; /* Increased margin for spacing */
 }
 
 nav ul li a {
     color: white; /* Link color */
     text-decoration: none; /* No underline */
     font-weight: bold; /* Bold text */
+    padding: 15px 30px; /* Increased padding for larger clickable area */
+    font-size: 1.2em; /* Increase font size */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
 }
 
 /* Main content area styling */
@@ -74,6 +92,10 @@ p {
     header {
         padding: 20px; /* Less padding on mobile */
         height: auto; /* Adjust height for mobile */
+    }
+
+    .nav-box {
+        flex-direction: column; /* Stack links on mobile */
     }
 
     nav ul li {
