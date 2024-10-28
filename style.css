@@ -2,18 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Light background */
+    background-image: url('images/new-background.jpg'); /* Replace with your new background image */
+    background-size: cover; /* Make the background cover the entire screen */
+    background-position: center; /* Center the background */
+    background-attachment: fixed; /* Keeps background fixed on scroll */
+    color: #333; /* Adjust text color for contrast */
 }
 
 header {
-    position: relative;
     text-align: center;
     padding: 50px;
-    background-image: url('images/header-image.jpg'); /* Background image */
-    background-size: cover; /* Cover the entire header area */
-    background-position: center; /* Center the image */
     color: white; /* Text color */
-    min-height: 60vh; /* Minimum height to ensure coverage on desktop */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background to enhance text readability */
 }
 
 nav ul {
@@ -34,53 +34,47 @@ nav ul li a {
 
 main {
     padding: 20px; /* Spacing around main content */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .content-section {
-    background: white; /* White background for sections */
+    background: white;
     margin: 20px 0;
     padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    display: flex; /* Flexbox layout */
-    align-items: center; /* Center items vertically */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
 }
 
 .content-section img {
-    width: 100%; /* Responsive image */
-    max-width: 300px; /* Limit maximum size */
-    height: auto; /* Keep aspect ratio */
-    margin-right: 20px; /* Space between image and text */
-}
-
-h2 {
-    color: #333; /* Darker color for section titles */
-}
-
-p {
-    line-height: 1.6; /* Improve readability */
-    color: #555; /* Gray text color */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-right: 20px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     header {
-        padding: 20px; /* Less padding on mobile */
-        min-height: 40vh; /* Reduce min-height for smaller screens */
+        padding: 20px;
     }
 
     nav ul li {
-        display: block; /* Stack navigation links */
-        margin: 10px 0; /* Adjust margin */
+        display: block;
+        margin: 10px 0;
     }
 
     .content-section {
-        flex-direction: column; /* Stack image and text on mobile */
-        align-items: flex-start; /* Align items to the start */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .content-section img {
-        margin-right: 0; /* Remove margin on mobile */
-        margin-bottom: 10px; /* Add space below image */
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 }
