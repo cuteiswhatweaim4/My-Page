@@ -58,10 +58,11 @@ section {
 }
 
 section img {
-    max-width: 80px; /* Adjust the max width for images */
+    width: 100%; /* Responsive image */
+    max-width: 600px; /* Limit maximum size */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners for aesthetics */
-    margin-right: 15px; /* Space between image and text */
+    margin: 20px auto; /* Center the image */
+    display: block; /* Block element for centering */
 }
 
 section div {
