@@ -50,6 +50,9 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-content {
     display: flex; /* Flexbox for side-by-side layout */
     align-items: center; /* Center items vertically */
 }
@@ -100,7 +103,7 @@ footer {
         margin: 10px 0;
     }
 
-    section {
+    .section-content {
         flex-direction: column; /* Stack image and text on smaller screens */
     }
 
