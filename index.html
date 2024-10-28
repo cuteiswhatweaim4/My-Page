@@ -3,60 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knowledge, Facts, Ideas, and Technology</title>
-    <link rel="stylesheet" href="Style.css">
+    <meta name="description" content="Explore knowledge facts, ideas, and technology in quantum computing, blockchain, and augmented reality.">
+    <title>Knowledge Facts, Ideas and Technology</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Explore Knowledge, Facts, Ideas, and Technology</h1>
-        <nav>
-            <ul>
-                <li><a href="#quantum" onclick="showContent('quantum')">Quantum Computing</a></li>
-                <li><a href="#blockchain" onclick="showContent('blockchain')">Blockchain Technology</a></li>
-                <li><a href="#augmented" onclick="showContent('augmented')">Augmented Reality</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <nav>
+        <ul>
+            <li><a href="#quantum">Quantum Computing</a></li>
+            <li><a href="#blockchain">Blockchain Technology</a></li>
+            <li><a href="#augmented">Augmented Reality</a></li>
+        </ul>
+    </nav>
     <main>
-        <!-- Main Page with Large Clickable Sections -->
-        <div id="home-sections">
-            <a href="#quantum" data-section="quantum">Quantum Computing</a>
-            <a href="#blockchain" data-section="blockchain">Blockchain Technology</a>
-            <a href="#augmented" data-section="augmented">Augmented Reality</a>
-        </div>
-        <!-- Sections with Return Button -->
-        <section id="quantum" class="content-section" style="display: none;">
-            <button id="return-home">Return to Home</button>
-            <img src="images/quantum.jpg" alt="Quantum Computing">
+        <section id="quantum">
             <h2>Quantum Computing</h2>
-            <p>Quantum computing is a type of computation that takes advantage of the quantum states of subatomic particles.</p>
+            <div class="content">
+                <img src="images/quantum.jpg" alt="Illustration of Quantum Computing Concepts">
+                <p>Quantum computing uses quantum bits (qubits) that can exist in multiple states simultaneously, enabling processing capabilities beyond classical computers.</p>
+            </div>
         </section>
-
-        <section id="blockchain" class="content-section" style="display: none;">
-            <button id="return-home">Return to Home</button>
-            <img src="images/blockchain.jpg" alt="Blockchain Technology">
+        <section id="blockchain">
             <h2>Blockchain Technology</h2>
-            <p>Blockchain technology is a decentralized digital ledger that records transactions across many computers.</p>
+            <div class="content">
+                <img src="images/blockchain.jpg" alt="Visual Representation of Blockchain Technology">
+                <p>Blockchain is a decentralized digital ledger that records transactions across many computers, ensuring security and immutability.</p>
+            </div>
         </section>
-
-        <section id="augmented" class="content-section" style="display: none;">
-            <button id="return-home">Return to Home</button>
-            <img src="images/augmented.jpg" alt="Augmented Reality">
+        <section id="augmented">
             <h2>Augmented Reality</h2>
-            <p>Augmented reality is an interactive experience where digital information is overlaid on the real world.</p>
+            <div class="content">
+                <img src="images/augmented.jpg" alt="Augmented Reality Application Example">
+                <p>Augmented reality (AR) overlays digital information onto the real world, enhancing user experiences in gaming, education, and various industries.</p>
+            </div>
         </section>
     </main>
-
+    <footer>
+        <p>&copy; 2024 Knowledge Hub. All rights reserved.</p>
+    </footer>
     <script>
-        function showContent(topic) {
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => {
-                section.style.display = 'none'; // Hide all sections
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default anchor behavior
+                const targetId = this.getAttribute('href'); // Get the target ID
+                const targetElement = document.querySelector(targetId); // Select the target element
+                targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly to the target element
             });
-            document.getElementById(topic).style.display = 'block'; // Show selected section
-        }
+        });
     </script>
-    <script src="app.js"></script>
 </body>
 </html>
