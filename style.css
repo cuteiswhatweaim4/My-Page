@@ -1,125 +1,146 @@
-/* styles.css */
-
+/* General styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #eaf2f8; /* Soft blue background */
-    color: #34495e; /* Darker text color for contrast */
+    background-image: url('images/new-background.jpg'); /* Replace with your new background image */
+    background-size: cover; /* Make the background cover the entire screen */
+    background-position: center; /* Center the background */
+    background-attachment: fixed; /* Keeps background fixed on scroll */
+    color: #333; /* Adjust text color for contrast */
+    background-color: #f0f0f0;
 }
 
+/* Header with Background Image */
 header {
-    background: #2980b9; /* Deep blue header */
-    color: #ffffff;
-    padding: 20px 0;
     text-align: center;
+    padding: 50px;
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background to enhance text readability */
+    background-image: url('images/header-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
+header h1 {
+    font-size: 2em;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
+/* Home Sections - Large Clickable Links */
+#home-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
 }
 
 nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
+    color: white; /* Link color */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
+#home-sections a {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px 40px;
+    font-size: 1.5em;
     font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline; /* Underline on hover */
+    color: #333;
+    text-decoration: none;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 main {
-    padding: 20px;
-    max-width: 1200px; /* Max width for larger screens */
-    margin: auto; /* Centering the main content */
-    background: #f8faff; /* Light blue background for the main area */
-    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Spacing around main content */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: auto;
+#home-sections a:hover {
+    background-color: #c0c0c0;
+    transform: scale(1.05);
 }
 
-section {
-    background: #ffffff; /* White background for sections */
+/* Content Sections (Hidden by Default) */
+.content-section {
+    background: white;
     margin: 20px 0;
+    display: none;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    text-align: left;
 }
 
-.section-content {
-    display: flex; /* Use flexbox for alignment */
-    align-items: flex-start; /* Align items to the start */
+.content-section img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
-
-section img {
-    width: 100%; /* Responsive image */
-    max-width: 600px; /* Limit maximum size */
-    height: auto; /* Maintain aspect ratio */
-    margin: 20px auto; /* Center the image */
-    display: block; /* Block element for centering */
+.content-section h2 {
+    color: #333;
+    margin-top: 0;
 }
-
-section div {
-    max-width: 70%; /* Limit text width for readability */
-    padding: 15px; /* Add padding for text area */
+.content-section p {
+    color: #555;
+    line-height: 1.6;
 }
-
-section h2 {
-    color: #3498db; /* Lighter blue for headings */
-}
-
-button {
-    background-color: #3498db; /* Button color */
-    color: #ffffff;
+/* Return Home Button */
+#return-home {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #333;
     border: none;
-    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Animation on hover */
+    transition: background-color 0.3s;
+}
+#return-home:hover {
+    background-color: #555;
 }
 
-button:hover {
-    background-color: #2980b9; /* Darker blue on hover */
-}
+/* Responsive Styles */
+@@ -63,18 +100,17 @@ main {
+        padding: 20px;
+    }
 
-footer {
-    text-align: center;
-    padding: 15px 0;
-    background: #2980b9; /* Deep blue footer */
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
     nav ul li {
-        display: block; /* Stack navigation links on small screens */
+        display: block;
         margin: 10px 0;
+    #home-sections a {
+        padding: 15px 30px;
+        font-size: 1.2em;
     }
 
-    .section-content {
-        flex-direction: column; /* Stack image and text on smaller screens */
-        align-items: flex-start; /* Align items to the start */
+    .content-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
     }
 
-    section img {
-        max-width: 100%; /* Full width for images on mobile */
-        margin: 0 0 15px; /* Adjust margin for mobile */
-    }
-
-    section div {
-        max-width: 100%; /* Full width for text on mobile */
-    }
-
-    button {
-        width: 100%; /* Full-width buttons on mobile */
+    .content-section img {
+        margin-right: 0;
+        margin-bottom: 10px;
+        max-width: 100%;
+        margin-bottom: 15px;
     }
 }
