@@ -2,88 +2,69 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('images/background-image.jpg'); /* Main background */
-    background-size: cover; /* Cover the entire screen */
-    background-position: center; /* Center the image */
-    color: #333; /* Default text color */
+    background: url('images/your-background-image.jpg') no-repeat center center fixed; /* Full background image */
+    background-size: cover; /* Cover the entire body */
 }
 
 header {
     text-align: center;
-    padding: 50px 20px; /* Increased padding for a spacious feel */
+    padding: 20px;
     color: white; /* Text color */
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for contrast */
 }
 
-.link-box {
-    background: rgba(255, 255, 255, 0.9); /* Slightly opaque background for the link box */
-    border-radius: 10px; /* Rounded corners */
-    padding: 40px; /* Increased padding */
-    max-width: 900px; /* Wider max width */
-    margin: 40px auto; /* Center the box */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
-    display: flex; /* Flexbox layout */
-    justify-content: space-around; /* Space out the links */
+nav {
+    margin: 20px 0; /* Margin around the navigation */
 }
 
-.link-box a {
-    background: rgba(0, 0, 0, 0.8); /* Dark background for links */
-    color: white; /* White text color */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: block; /* Stack navigation links */
+    margin: 10px 0; /* Adjust margin */
+}
+
+nav ul li a {
+    color: white; /* Link color */
     text-decoration: none; /* No underline */
     font-weight: bold; /* Bold text */
-    padding: 15px 25px; /* More padding for a button effect */
-    border-radius: 5px; /* Rounded corners */
-    transition: background 0.3s, transform 0.2s; /* Smooth background and transform */
+    padding: 10px 20px; /* Padding for clickable area */
+    border: 2px solid white; /* Border around links */
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
-.link-box a:hover {
-    background: rgba(255, 255, 255, 0.8); /* Lighter background on hover */
-    color: #000; /* Dark text color on hover */
-    transform: scale(1.05); /* Slightly grow on hover */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Change background on hover */
+    color: #333; /* Darker text color on hover */
 }
 
-.content-section {
-    background: white; /* White background for sections */
-    margin: 40px auto; /* Center sections */
-    padding: 30px; /* Increased padding */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-    display: flex; /* Flexbox layout */
-    flex-direction: column; /* Stack image and text */
-    align-items: center; /* Center items */
+main {
+    padding: 20px; /* Spacing around main content */
 }
 
-.content-section img {
-    width: 100%; /* Responsive image */
-    max-width: 400px; /* Limit maximum size */
-    height: auto; /* Keep aspect ratio */
-    margin-top: 20px; /* Space above image */
-    border-radius: 10px; /* Rounded corners */
+.section-box {
+    background: rgba(255, 255, 255, 0.9); /* Light background for sections */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 h2 {
-    color: #007BFF; /* Primary color for section titles */
-    margin-bottom: 15px; /* Space below titles */
+    color: #333; /* Darker color for section titles */
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Padding around titles */
+    background: rgba(0, 0, 0, 0.1); /* Slight background for h2 */
+    border-radius: 8px; /* Rounded corners */
 }
 
 p {
-    line-height: 1.8; /* Improve readability */
+    line-height: 1.6; /* Improve readability */
     color: #555; /* Gray text color */
-}
-
-.return-button {
-    background: #28a745; /* Green background for return button */
-    color: white; /* White text color */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 20px; /* Padding */
-    cursor: pointer; /* Pointer cursor */
-    transition: background 0.3s; /* Smooth background transition */
-    margin-top: 20px; /* Space above button */
-}
-
-.return-button:hover {
-    background: #218838; /* Darker green on hover */
 }
 
 /* Responsive Styles */
@@ -92,8 +73,18 @@ p {
         padding: 20px; /* Less padding on mobile */
     }
 
-    .link-box {
-        flex-direction: column; /* Stack links on mobile */
-        align-items: center; /* Center links */
+    nav ul li {
+        display: block; /* Stack navigation links */
+        margin: 10px 0; /* Adjust margin */
+    }
+
+    .content-section {
+        flex-direction: column; /* Stack image and text on mobile */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .content-section img {
+        margin-right: 0; /* Remove margin on mobile */
+        margin-bottom: 10px; /* Add space below image */
     }
 }
