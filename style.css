@@ -2,83 +2,87 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('images/background.jpg'); /* New background image for the body */
-    background-size: cover; /* Cover the entire body */
+    background-image: url('images/background-image.jpg'); /* Main background */
+    background-size: cover; /* Cover the entire screen */
     background-position: center; /* Center the image */
+    color: #333; /* Default text color */
 }
 
 header {
     text-align: center;
-    padding: 50px;
+    padding: 50px 20px; /* Increased padding for a spacious feel */
     color: white; /* Text color */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for header */
-}
-
-.main-links {
-    text-align: center; /* Center align the links */
-    margin: 20px; /* Margin around the section */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for contrast */
 }
 
 .link-box {
-    display: flex; /* Flexbox layout */
-    justify-content: center; /* Center the links */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
-
-.topic-link {
-    display: inline-block; /* Block level link */
-    padding: 20px; /* Padding around links */
-    margin: 10px; /* Space between links */
-    background: rgba(255, 255, 255, 0.8); /* Light background */
-    color: #333; /* Dark text color */
-    text-decoration: none; /* No underline */
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
     border-radius: 10px; /* Rounded corners */
-    transition: background 0.3s; /* Smooth transition */
+    padding: 40px; /* Increased padding */
+    max-width: 900px; /* Wider max width */
+    margin: 40px auto; /* Center the box */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    display: flex; /* Flexbox layout */
+    justify-content: space-around; /* Space out the links */
 }
 
-.topic-link:hover {
-    background: rgba(255, 255, 255, 1); /* Change background on hover */
+.link-box a {
+    background: #007BFF; /* Button-like background */
+    color: white; /* White text color */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
+    padding: 15px 25px; /* More padding for a button effect */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s, transform 0.2s; /* Smooth background and transform */
+}
+
+.link-box a:hover {
+    background: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly grow on hover */
 }
 
 .content-section {
     background: white; /* White background for sections */
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 40px auto; /* Center sections */
+    padding: 30px; /* Increased padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
     display: flex; /* Flexbox layout */
-    align-items: center; /* Center items vertically */
+    flex-direction: column; /* Stack image and text */
+    align-items: center; /* Center items */
 }
 
 .content-section img {
     width: 100%; /* Responsive image */
     max-width: 400px; /* Limit maximum size */
     height: auto; /* Keep aspect ratio */
-    margin-right: 20px; /* Space between image and text */
+    margin-top: 20px; /* Space above image */
+    border-radius: 10px; /* Rounded corners */
 }
 
 h2 {
-    color: #333; /* Darker color for section titles */
+    color: #007BFF; /* Primary color for section titles */
+    margin-bottom: 15px; /* Space below titles */
 }
 
 p {
-    line-height: 1.6; /* Improve readability */
+    line-height: 1.8; /* Improve readability */
     color: #555; /* Gray text color */
 }
 
 .return-button {
-    margin-bottom: 20px; /* Space below button */
-    padding: 10px 15px; /* Button padding */
-    background-color: #007BFF; /* Button color */
-    color: white; /* Button text color */
+    background: #28a745; /* Green background for return button */
+    color: white; /* White text color */
     border: none; /* No border */
     border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
     cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s; /* Smooth transition */
+    transition: background 0.3s; /* Smooth background transition */
+    margin-top: 20px; /* Space above button */
 }
 
 .return-button:hover {
-    background-color: #0056b3; /* Darker color on hover */
+    background: #218838; /* Darker green on hover */
 }
 
 /* Responsive Styles */
@@ -87,13 +91,8 @@ p {
         padding: 20px; /* Less padding on mobile */
     }
 
-    .content-section {
-        flex-direction: column; /* Stack image and text on mobile */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .content-section img {
-        margin-right: 0; /* Remove margin on mobile */
-        margin-bottom: 10px; /* Add space below image */
+    .link-box {
+        flex-direction: column; /* Stack links on mobile */
+        align-items: center; /* Center links */
     }
 }
