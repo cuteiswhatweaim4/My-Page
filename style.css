@@ -58,10 +58,10 @@ section {
 }
 
 section img {
-    max-width: 25%; /* Set a reasonable max-width for images */
+    max-width: 80px; /* Adjust the max width for images */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Rounded corners for aesthetics */
-    margin-right: 20px; /* Space between image and text */
+    margin-right: 15px; /* Space between image and text */
 }
 
 section div {
