@@ -1,19 +1,27 @@
-function showContent(topic) {
-    const sections = document.querySelectorAll('.content-section');
-    sections.forEach(section => {
-        section.classList.remove('show'); // Hide all sections
-        section.setAttribute('aria-hidden', 'true'); // Hide from screen readers
+document.addEventListener("DOMContentLoaded", () => {
+    const homeSections = document.getElementById('home-sections');
+    const contentSections = document.querySelectorAll('.content-section');
+    const homeLinks = document.querySelectorAll('#home-sections a');
+    const returnButtons = document.querySelectorAll('#return-home');
+    // Show content for selected section and hide home sections
+    homeLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();  // Prevent default anchor behavior
+            const sectionId = link.getAttribute('data-section');
+            homeSections.style.display = 'none';
+            contentSections.forEach(section => {
+                section.style.display = 'none';  // Hide all sections
+            });
+            document.getElementById(sectionId).style.display = 'block';  // Show selected section
+        });
     });
-    const selectedSection = document.getElementById(topic);
-    selectedSection.classList.add('show'); // Show selected section
-    selectedSection.setAttribute('aria-hidden', 'false'); // Show to screen readers
-}
-
-function showHome() {
-    const sections = document.querySelectorAll('.content-section');
-    sections.forEach(section => {
-        section.classList.remove('show'); // Hide all sections
-        section.setAttribute('aria-hidden', 'true'); // Hide from screen readers
+    // Return to the home page
+    returnButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            homeSections.style.display = 'flex';
+            contentSections.forEach(section => {
+                section.style.display = 'none';  // Hide all sections
+            });
+        });
     });
-    document.querySelector('.link-box').style.display = 'block'; // Show link box
-}
+});
