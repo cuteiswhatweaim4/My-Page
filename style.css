@@ -1,65 +1,48 @@
-/* General body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Light background */
+    background: url('images/background.jpg') no-repeat center center fixed; /* Background image for the entire screen */
+    background-size: cover; /* Cover the entire background */
 }
 
-/* Header styling */
 header {
-    position: relative;
     text-align: center;
     padding: 50px;
-    background-image: url('images/header-image.jpg'); /* Background image for the header */
-    background-size: cover; /* Cover the entire header area */
-    background-position: center; /* Center the image */
     color: white; /* Text color */
-    height: 100vh; /* Full viewport height for the header */
+    z-index: 1;
+    position: relative; /* Relative positioning */
 }
 
-/* Navigation styles */
 .nav-box {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the box */
-    margin: 20px; /* Space around the nav box */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside the box */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    text-align: center;
+    padding: 20px; /* Spacing around navigation */
 }
 
-nav ul {
+.nav-box ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Remove default margin */
-    display: flex; /* Align links in a row */
 }
 
-nav ul li {
-    margin: 0 20px; /* Increased margin for spacing */
+.nav-box ul li {
+    display: inline-block;
+    margin: 0 15px;
 }
 
-nav ul li a {
-    color: white; /* Link color */
+.nav-box ul li a {
+    display: inline-block;
+    padding: 15px 25px; /* Padding for larger clickable area */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for links */
+    color: #333; /* Dark text color */
     text-decoration: none; /* No underline */
     font-weight: bold; /* Bold text */
-    padding: 15px 30px; /* Increased padding for larger clickable area */
-    font-size: 1.2em; /* Increase font size */
-    transition: background-color 0.3s; /* Smooth background color transition */
+    border-radius: 5px; /* Rounded corners */
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
-}
-
-/* Main content area styling */
 main {
     padding: 20px; /* Spacing around main content */
-    z-index: 1; /* Ensure it appears above the background */
 }
 
-/* Content sections styling */
 .content-section {
     background: white; /* White background for sections */
     margin: 20px 0;
@@ -77,7 +60,6 @@ main {
     margin-right: 20px; /* Space between image and text */
 }
 
-/* Headings and paragraph styles */
 h2 {
     color: #333; /* Darker color for section titles */
 }
@@ -91,14 +73,9 @@ p {
 @media (max-width: 768px) {
     header {
         padding: 20px; /* Less padding on mobile */
-        height: auto; /* Adjust height for mobile */
     }
 
-    .nav-box {
-        flex-direction: column; /* Stack links on mobile */
-    }
-
-    nav ul li {
+    .nav-box ul li {
         display: block; /* Stack navigation links */
         margin: 10px 0; /* Adjust margin */
     }
