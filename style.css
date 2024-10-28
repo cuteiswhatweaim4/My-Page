@@ -1,139 +1,28 @@
-/* General styles */
+/* Apply the background image to the entire body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Light background for fallback */
+    background-image: url('images/header-image.jpg'); /* Full background image */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the image */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flex to center header content */
+    flex-direction: column; /* Stack elements */
+    justify-content: center; /* Center content vertically */
 }
 
-/* Header */
+/* Header styling */
 header {
     text-align: center;
-    padding: 50px;
-    background-image: url('images/header-image.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
+    padding: 50px; /* Adjust padding as needed */
+    color: white; /* Text color for visibility */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background for better text visibility */
 }
 
-/* Home Sections - Large Clickable Links */
-#home-sections {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin: 50px auto;
-    padding: 0 20px;
-    max-width: 900px;
-}
-
-#home-sections a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 280px; /* Fixed width for larger screens */
-    height: 100px;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-#home-sections a:hover {
-    background-color: #c0c0c0;
-    transform: scale(1.05);
-}
-
-/* Content Sections (Hidden by Default) */
-.content-section {
-    display: none;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-/* Image Styling for Sections */
-.content-section img {
-    width: 100%;
-    max-width: 600px; /* Larger max width for desktop */
-    height: auto;
-    margin-bottom: 20px;
-}
-
-/* Section Titles and Paragraphs */
-.content-section h2 {
-    color: #333;
-    margin-top: 0;
-}
-
-.content-section p {
-    color: #555;
-    line-height: 1.6;
-}
-
-/* Return Home Button */
-#return-home {
-    display: inline-block;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
-    color: white;
-    background-color: #333;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#return-home:hover {
-    background-color: #555;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header {
-        padding: 20px;
-    }
-
-    #home-sections {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    #home-sections a {
-        max-width: 100%;
-        padding: 15px 0;
-        font-size: 1.2em;
-    }
-
-    .content-section {
-        padding: 15px;
-    }
-
-    .content-section img {
-        max-width: 100%; /* Maintain responsive design on mobile */
-        margin-bottom: 15px;
-    }
-}
-
-/* Styles for Larger Screens */
-@media (min-width: 769px) {
-    .content-section img {
-        max-width: 800px; /* Increase max width for desktop */
-    }
-
-    .content-section {
-        display: flex;
-        flex-direction: row;
-        align-items: center; /* Align items in a row for desktop */
-    }
+/* Main sections (adjust padding to suit your needs) */
+main {
+    padding: 20px; /* Spacing around main content */
+    z-index: 1; /* Ensure it appears above the background */
 }
