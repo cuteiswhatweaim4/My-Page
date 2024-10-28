@@ -2,18 +2,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('images/your-background-image.jpg') no-repeat center center fixed; /* Full background image */
-    background-size: cover; /* Cover the entire body */
+    background: url('images/your-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 header {
     text-align: center;
-    padding: 20px;
-    color: white; /* Text color */
+    padding: 40px 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Adding a background for better contrast */
 }
 
 nav {
-    margin: 20px 0; /* Margin around the navigation */
+    margin: 20px 0;
 }
 
 nav ul {
@@ -22,83 +23,85 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block; /* Horizontal layout for navigation */
-    margin: 10px 15px; /* Adjust margin */
+    display: inline-block;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: white; /* Link color */
-    text-decoration: none; /* No underline */
-    font-weight: bold; /* Bold text */
-    padding: 10px 20px; /* Padding for clickable area */
-    border: 2px solid white; /* Border around links */
-    border-radius: 8px; /* Rounded corners */
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-    transition: background-color 0.3s; /* Smooth transition */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s, transform 0.3s; /* Added transform */
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.8); /* Change background on hover */
-    color: #333; /* Darker text color on hover */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    transform: scale(1.05); /* Slight scale effect on hover */
 }
 
 main {
-    padding: 20px; /* Spacing around main content */
+    padding: 20px;
 }
 
 .section-box {
-    background: rgba(255, 255, 255, 0.9); /* Light background for sections */
+    background: rgba(255, 255, 255, 0.9);
     margin: 20px 0;
     padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-    color: #333; /* Darker color for section titles */
-    margin: 0; /* Remove default margin */
-    padding: 10px; /* Padding around titles */
-    background: rgba(0, 0, 0, 0.1); /* Slight background for h2 */
-    border-radius: 8px; /* Rounded corners */
+    color: #333;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 /* Main Page Styles */
 .main-links {
     display: flex;
-    flex-direction: column; /* Stack links vertically */
-    align-items: center; /* Center links */
-    margin: 20px; /* Margin around links */
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }
 
 .main-links a {
-    display: block; /* Make link block-level */
-    margin: 10px 0; /* Margin between links */
-    padding: 15px; /* Padding for clickable area */
-    background: rgba(255, 255, 255, 0.8); /* Light background */
-    color: #333; /* Dark text color */
-    border-radius: 8px; /* Rounded corners */
-    text-align: center; /* Center text */
-    width: 250px; /* Fixed width for consistency */
-    text-decoration: none; /* No underline */
-    transition: background-color 0.3s; /* Smooth transition */
+    display: block;
+    margin: 10px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; /* Added transform */
 }
 
 .main-links a:hover {
-    background: rgba(0, 0, 0, 0.1); /* Change background on hover */
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05); /* Slight scale effect on hover */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     header {
-        padding: 20px; /* Less padding on mobile */
+        padding: 20px;
     }
 
     nav ul li {
-        display: block; /* Stack navigation links */
-        margin: 10px 0; /* Adjust margin */
+        display: block;
+        margin: 10px 0;
     }
 
     .section-box {
-        padding: 15px; /* Less padding in sections on mobile */
+        padding: 15px;
     }
 }
