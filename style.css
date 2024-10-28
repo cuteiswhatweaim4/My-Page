@@ -16,7 +16,7 @@ header {
 }
 
 .link-box {
-    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque background for the link box */
     border-radius: 10px; /* Rounded corners */
     padding: 40px; /* Increased padding */
     max-width: 900px; /* Wider max width */
@@ -27,7 +27,7 @@ header {
 }
 
 .link-box a {
-    background: #007BFF; /* Button-like background */
+    background: rgba(0, 0, 0, 0.8); /* Dark background for links */
     color: white; /* White text color */
     text-decoration: none; /* No underline */
     font-weight: bold; /* Bold text */
@@ -37,7 +37,8 @@ header {
 }
 
 .link-box a:hover {
-    background: #0056b3; /* Darker blue on hover */
+    background: rgba(255, 255, 255, 0.8); /* Lighter background on hover */
+    color: #000; /* Dark text color on hover */
     transform: scale(1.05); /* Slightly grow on hover */
 }
 
