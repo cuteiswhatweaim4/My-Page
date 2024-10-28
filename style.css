@@ -1,36 +1,53 @@
-font-family: Arial, sans-serif;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* Light background */
-    background-color: #f0f0f0; /* Light background */
+    background-image: url('images/new-background.jpg'); /* Background image for main page */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
 }
 
 header {
-    position: relative;
     text-align: center;
-    padding: 20px;
-    background-color: #f1c40f; /* Aesthetic yellow background */
     padding: 50px;
-    background-image: url('images/header-image.jpg'); /* Background image */
-    background-size: cover; /* Cover the entire header area */
-    background-position: center; /* Center the image */
     color: white; /* Text color */
 }
 
-@@ -18,7 +21,7 @@ nav ul {
+.link-box {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Spacing inside the box */
+    margin: 20px; /* Margin around the box */
+    text-align: center; /* Center the text */
 }
 
-nav ul li {
-    display: inline;
-    display: inline-block;
-    margin: 0 15px;
+.link-box h2 {
+    margin-bottom: 10px; /* Space below the heading */
 }
 
-@@ -32,24 +35,21 @@ main {
-    padding: 20px; /* Spacing around main content */
+.link-box ul {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
 }
 
-section {
+.link-box ul li {
+    margin: 10px 0; /* Space between items */
+}
+
+.link-box ul li a {
+    text-decoration: none; /* No underline */
+    color: #333; /* Dark text color */
+    padding: 10px 20px; /* Spacing inside the link */
+    border: 2px solid #333; /* Border around the link */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s, color 0.3s; /* Transition for hover effects */
+}
+
+.link-box ul li a:hover {
+    background: #333; /* Dark background on hover */
+    color: white; /* White text on hover */
+}
+
 .content-section {
     background: white; /* White background for sections */
     margin: 20px 0;
@@ -41,38 +58,38 @@ section {
     align-items: center; /* Center items vertically */
 }
 
-section img {
+.section-content {
+    display: flex; /* Flexbox layout for section content */
+    align-items: center; /* Center items vertically */
+}
+
 .content-section img {
     width: 100%; /* Responsive image */
-    max-width: 600px; /* Limit maximum size */
     max-width: 300px; /* Limit maximum size */
     height: auto; /* Keep aspect ratio */
-    margin: 0 auto; /* Center the image */
-    display: block; /* Block element */
-}
-.hidden {
-    display: none; /* Hide sections by default */
     margin-right: 20px; /* Space between image and text */
 }
 
 h2 {
-@@ -60,3 +60,25 @@ p {
+    color: #333; /* Darker color for section titles */
+}
+
+p {
     line-height: 1.6; /* Improve readability */
     color: #555; /* Gray text color */
 }
+
 /* Responsive Styles */
 @media (max-width: 768px) {
-    header {
-        padding: 20px; /* Less padding on mobile */
+    .link-box {
+        padding: 10px; /* Less padding on mobile */
     }
-    nav ul li {
-        display: block; /* Stack navigation links */
-        margin: 10px 0; /* Adjust margin */
-    }
+
     .content-section {
         flex-direction: column; /* Stack image and text on mobile */
         align-items: flex-start; /* Align items to the start */
     }
+
     .content-section img {
         margin-right: 0; /* Remove margin on mobile */
         margin-bottom: 10px; /* Add space below image */
