@@ -1,94 +1,64 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f5f5f5;
+/* Common styles for content sections */
+.content-section {
+    padding: 2rem;
+    margin: 1rem auto;
+    width: 80%;
     text-align: center;
-    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
 }
 
-/* Title Styling */
-.main-title {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: bold;
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-/* Categories Section */
+.content-section p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+/* Unique styles for each topic */
+.tech {
+    background-color: #1e3a8a; /* Dark blue */
+}
+
+.science {
+    background-color: #059669; /* Teal */
+}
+
+.history {
+    background-color: #b91c1c; /* Dark red */
+}
+
+.arts {
+    background-color: #6b21a8; /* Purple */
+}
+
+/* Center main page categories */
 .categories {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    .categories {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
 .category-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 180px;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 6px;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .category-card:hover {
-    transform: translateY(-5px);
-}
-
-.category-card .icon {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.category-card h3 {
-    font-size: 1.2em;
-    color: #333;
-}
-
-.category-card p {
-    color: #777;
-}
-
-/* Topic Content Section */
-.hidden {
-    display: none;
-}
-
-#topic-content {
-    margin-top: 20px;
-    text-align: left;
-    padding: 20px;
-}
-
-#topic-content button {
-    display: inline-block;
-    margin-bottom: 20px;
-    background-color: #ff5a5f;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-@media (max-width: 600px) {
-    .categories {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .category-card {
-        width: 80%;
-    }
+    transform: scale(1.05);
 }
