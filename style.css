@@ -1,139 +1,131 @@
-/* Reset some basic styles */
+/* Basic Reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); /* Gradient background */
+    font-family: Arial, sans-serif;
     color: #333;
-    line-height: 1.6;
-    padding: 20px;
+    background-color: #f5f5f5;
 }
 
-/* Header and Footer Styles */
+/* Navbar */
 header {
-    background-color: #4fc3f7;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
 }
 
-footer {
-    background-color: #4fc3f7;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Main Content Styles */
-main {
-    max-width: 800px;
+.navbar {
+    max-width: 1200px;
     margin: auto;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Navigation Styles with Card-Like Link */
-nav ul {
-    list-style-type: none;
-    padding: 0;
     display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between each link card */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
-nav ul li {
-    margin: 0;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff5a5f;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
 nav ul li a {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    border-radius: 8px;
-    background: #ffffff;
-    color: #00796b;
-    font-weight: bold;
     text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
-    position: relative;
-    overflow: hidden;
+    color: #333;
+    font-weight: bold;
 }
 
-/* Icon for Each Link */
-nav ul li a::before {
-    content: "🔍"; /* Example icon, replace with any */
-    font-size: 1.5em;
-    margin-right: 10px;
+/* Hero Section */
+.hero {
+    background: url('images/technology.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 150px;
+}
+
+.search-bar button {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #e04750;
+}
+
+/* Categories Section */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.category-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 180px;
+    text-align: center;
     transition: transform 0.3s;
 }
 
-/* Hover Effects */
-nav ul li a:hover {
-    background-color: #e0f7fa; /* Slightly lighter teal */
-    color: #004d40; /* Darker teal on hover */
-    transform: translateY(-4px); /* Lift effect on hover */
+.category-card:hover {
+    transform: translateY(-5px);
 }
 
-nav ul li a:hover::before {
-    transform: rotate(20deg) scale(1.1); /* Slight rotate and scale effect on hover */
+.category-card .icon {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-/* Topic Content Styles */
-.topic-content {
-    display: none;
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #f1f8e9;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transition: opacity 0.3s;
+.category-card h3 {
+    font-size: 1.2em;
+    color: #333;
 }
 
-/* Back Button */
-button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #00796b;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.back-button {
-    display: block;
-    margin: 20px auto;
-    width: 200px;
-}
-
-button:hover {
-    background-color: #004d40;
-    transform: translateY(-2px);
-}
-
-/* Responsive Styles */
-@media (max-width: 600px) {
-    main {
-        padding: 10px;
-    }
-
-    button {
-        width: 100%;
-        padding: 12px;
-    }
-
-    nav ul li {
-        text-align: center;
-    }
+.category-card p {
+    color: #777;
 }
