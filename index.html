@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Knowledge Facts</title>
 </head>
 <body>
-    <section class="categories">
-        <div class="category-card" onclick="loadContent('technology')">
+    <section class="topic-links">
+        <a id="technology" class="category-card" onclick="loadContent('technology')">
             <span class="icon">🔍</span>
             <h3>Technology</h3>
-        </div>
-        <div class="category-card" onclick="loadContent('science')">
+        </a>
+        <a id="science" class="category-card" onclick="loadContent('science')">
             <span class="icon">🌍</span>
             <h3>Science</h3>
-        </div>
-        <div class="category-card" onclick="loadContent('history')">
+        </a>
+        <a id="history" class="category-card" onclick="loadContent('history')">
             <span class="icon">📚</span>
             <h3>History</h3>
-        </div>
-        <div class="category-card" onclick="loadContent('arts')">
+        </a>
+        <a id="arts" class="category-card" onclick="loadContent('arts')">
             <span class="icon">🎨</span>
             <h3>Arts</h3>
-        </div>
+        </a>
     </section>
 
     <section id="contentSection" style="display: none;">
