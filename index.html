@@ -7,37 +7,28 @@
     <title>Knowledge Facts</title>
 </head>
 <body>
-    <!-- Title -->
-    <h1 class="main-title">Knowledge Facts</h1>
-
-    <!-- Categories Section -->
     <section class="categories">
-        <div class="category-card" onclick="showContent('technology')">
+        <div class="category-card" onclick="loadContent('technology')">
             <span class="icon">🔍</span>
             <h3>Technology</h3>
-            <p>50 articles</p>
         </div>
-        <div class="category-card" onclick="showContent('science')">
+        <div class="category-card" onclick="loadContent('science')">
             <span class="icon">🌍</span>
             <h3>Science</h3>
-            <p>30 articles</p>
         </div>
-        <div class="category-card" onclick="showContent('history')">
+        <div class="category-card" onclick="loadContent('history')">
             <span class="icon">📚</span>
             <h3>History</h3>
-            <p>20 articles</p>
         </div>
-        <div class="category-card" onclick="showContent('arts')">
+        <div class="category-card" onclick="loadContent('arts')">
             <span class="icon">🎨</span>
             <h3>Arts</h3>
-            <p>10 articles</p>
         </div>
     </section>
 
-    <!-- Topic Content -->
-    <section id="topic-content" class="hidden">
-        <button onclick="returnHome()">Return to Homepage</button>
-        <div id="content-details"></div>
+    <section id="contentSection" style="display: none;">
+        <button onclick="returnToHome()">Return to Homepage</button>
+        <div id="content"></div>
     </section>
 
     <script src="app.js"></script>
