@@ -1,84 +1,59 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* === Topic Links with Background Images === */
+.topic-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.topic-links a {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  background-color: #4682b4; /* Fallback color in case images don’t load */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  background-size: cover;
+  background-position: center;
 }
 
-/* Category Cards */
-.categories {
-    display: flex;
-    gap: 30px;
-    padding: 20px;
+/* Background images for each topic */
+.topic-links a#technology {
+  background-image: url('images/technology.jpg');
 }
 
-.category-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    width: 200px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+.topic-links a#science {
+  background-image: url('images/science.jpg');
 }
 
-.category-card:hover {
-    transform: scale(1.05);
+.topic-links a#history {
+  background-image: url('images/history.jpg');
 }
 
-.category-card .icon {
-    font-size: 3em;
-    margin-bottom: 10px;
+.topic-links a#arts {
+  background-image: url('images/arts.jpg');
 }
 
-/* Content Section */
-#contentSection {
-    text-align: center;
-    padding: 20px;
+.topic-links a:hover {
+  transform: scale(1.05);
 }
 
-#contentSection h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-}
+/* Mobile and Desktop Responsive Adjustments */
+@media (max-width: 768px) {
+  .col {
+    min-width: 100%; /* Full-width on smaller screens */
+  }
 
-/* Unique Styles for Each Topic */
-body.technology #contentSection {
-    background-color: #e6f7ff;
-    color: #007acc;
-}
-
-body.science #contentSection {
-    background-color: #e0ffe6;
-    color: #009933;
-}
-
-body.history #contentSection {
-    background-color: #fff0e6;
-    color: #cc6600;
-}
-
-body.arts #contentSection {
-    background-color: #f7e6ff;
-    color: #9900cc;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007acc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  .topic-links {
+    flex-direction: column;
+  }
 }
