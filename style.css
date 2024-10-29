@@ -1,64 +1,84 @@
-/* Common styles for content sections */
-.content-section {
-    padding: 2rem;
-    margin: 1rem auto;
-    width: 80%;
-    text-align: center;
-    color: #fff;
-    border-radius: 8px;
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.content-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.content-section p {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-}
-
-/* Unique styles for each topic */
-.tech {
-    background-color: #1e3a8a; /* Dark blue */
-}
-
-.science {
-    background-color: #059669; /* Teal */
-}
-
-.history {
-    background-color: #b91c1c; /* Dark red */
-}
-
-.arts {
-    background-color: #6b21a8; /* Purple */
-}
-
-/* Center main page categories */
+/* Category Cards */
 .categories {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-/* Responsive design */
-@media (min-width: 768px) {
-    .categories {
-        flex-direction: row;
-        justify-content: center;
-    }
+    gap: 30px;
+    padding: 20px;
 }
 
 .category-card {
-    padding: 1rem;
-    margin: 0.5rem;
-    border-radius: 6px;
-    cursor: pointer;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 200px;
+    text-align: center;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .category-card:hover {
     transform: scale(1.05);
+}
+
+.category-card .icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Content Section */
+#contentSection {
+    text-align: center;
+    padding: 20px;
+}
+
+#contentSection h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+/* Unique Styles for Each Topic */
+body.technology #contentSection {
+    background-color: #e6f7ff;
+    color: #007acc;
+}
+
+body.science #contentSection {
+    background-color: #e0ffe6;
+    color: #009933;
+}
+
+body.history #contentSection {
+    background-color: #fff0e6;
+    color: #cc6600;
+}
+
+body.arts #contentSection {
+    background-color: #f7e6ff;
+    color: #9900cc;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
