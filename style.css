@@ -1,97 +1,60 @@
-/* General Styles */
-* {
-    box-sizing: border-box;
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
 }
 
+/* Body styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff8e1; /* Light yellow background */
-    color: #333; /* Default text color */
+    font-family: Arial, sans-serif; /* Use a clean font */
+    background-color: #e6f7ff; /* Light blue background */
+    color: #333; /* Dark text for contrast */
+    line-height: 1.6; /* Better readability */
 }
 
-nav {
-    background-color: #f9c74f; /* Aesthetic yellow */
-    padding: 15px;
+/* Header styling */
+header {
     text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #333; /* Dark text for links */
-    text-decoration: none; /* No underline */
-    font-weight: bold; /* Bold text */
-    transition: color 0.3s; /* Smooth color transition */
-}
-
-nav ul li a:hover {
-    color: #d48b2d; /* Change color on hover */
-}
-
-main {
-    padding: 20px; /* Spacing around main content */
-}
-
-section {
-    background: white; /* White background for sections */
-    margin: 20px 0;
     padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
+    background-color: #99ccff; /* Soft blue for header */
+    border-bottom: 5px solid #3399ff; /* A bit darker blue for contrast */
 }
 
-section img {
-    width: 40%; /* Set image width */
-    max-width: 250px; /* Limit maximum size */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 20px; /* Spacing between image and text */
+/* Main section styling */
+main {
+    max-width: 800px; /* Limit width for better readability */
+    margin: 20px auto; /* Center the main content */
+    padding: 20px;
+    background-color: #ffffff; /* White background for content area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-h2 {
-    color: #333; /* Darker color for section titles */
+/* Subtopic link styling */
+ul {
+    list-style-type: none; /* Remove bullet points */
 }
 
-p {
-    line-height: 1.6; /* Improve readability */
-    color: #555; /* Gray text color */
+li {
+    margin: 10px 0; /* Space between links */
 }
 
-/* Footer Styles */
+a {
+    text-decoration: none; /* Remove underline */
+    color: #3399ff; /* Link color */
+    font-weight: bold; /* Make links stand out */
+    transition: color 0.3s; /* Smooth color change */
+}
+
+a:hover {
+    color: #007acc; /* Darker blue on hover */
+}
+
+/* Footer styling */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #f9c74f; /* Match nav background */
-    color: #333; /* Dark text for footer */
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    nav ul li {
-        display: block; /* Stack items vertically */
-        margin: 10px 0; /* Spacing between items */
-    }
-
-    section {
-        flex-direction: column; /* Stack image above text on small screens */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    section img {
-        width: 100%; /* Make image full width on small screens */
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 10px; /* Add bottom margin */
-    }
+    padding: 10px;
+    background-color: #99ccff; /* Match header background */
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
