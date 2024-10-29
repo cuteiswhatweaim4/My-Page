@@ -44,10 +44,10 @@
     <script>
         document.querySelectorAll('nav ul li a').forEach(link => {
             link.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent default anchor behavior
-                const targetId = this.getAttribute('href'); // Get the target ID
-                const targetElement = document.querySelector(targetId); // Select the target element
-                targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly to the target element
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
