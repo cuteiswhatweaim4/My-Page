@@ -15,7 +15,7 @@ body {
 
 /* Header and Footer Styles */
 header {
-    background-color: #4fc3f7; /* Lighter blue for header */
+    background-color: #4fc3f7;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -23,7 +23,7 @@ header {
 }
 
 footer {
-    background-color: #4fc3f7; /* Match footer with header */
+    background-color: #4fc3f7;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -36,50 +36,75 @@ main {
     margin: auto;
     padding: 20px;
     border-radius: 8px;
-    background-color: #ffffff; /* White background for main content */
+    background-color: #ffffff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation Styles */
+/* Navigation Styles with Card-Like Link */
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between each link card */
 }
 
 nav ul li {
-    margin: 10px 0;
+    margin: 0;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #00796b; /* Teal color for links */
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #00796b;
     font-weight: bold;
-    transition: color 0.3s, transform 0.3s; /* Add a transform for hover */
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Icon for Each Link */
+nav ul li a::before {
+    content: "🔍"; /* Example icon, replace with any */
+    font-size: 1.5em;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+/* Hover Effects */
 nav ul li a:hover {
+    background-color: #e0f7fa; /* Slightly lighter teal */
     color: #004d40; /* Darker teal on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: translateY(-4px); /* Lift effect on hover */
+}
+
+nav ul li a:hover::before {
+    transform: rotate(20deg) scale(1.1); /* Slight rotate and scale effect on hover */
 }
 
 /* Topic Content Styles */
 .topic-content {
-    display: none; /* Initially hide all topic content */
+    display: none;
     margin-top: 20px;
     padding: 15px;
     border-radius: 8px;
-    background-color: #f1f8e9; /* Light green for content background */
+    background-color: #f1f8e9;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Start with opacity 0 for fade effect */
-    transition: opacity 0.3s; /* Transition for fade effect */
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-/* Button Styles */
+/* Back Button */
 button {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #00796b; /* Teal background for buttons */
+    background-color: #00796b;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -87,14 +112,14 @@ button {
 }
 
 .back-button {
-    display: block; /* Ensure it takes its own line */
-    margin: 20px auto; /* Center the button */
-    width: 200px; /* Fixed width */
+    display: block;
+    margin: 20px auto;
+    width: 200px;
 }
 
 button:hover {
-    background-color: #004d40; /* Darker teal on hover */
-    transform: translateY(-2px); /* Lift effect on hover */
+    background-color: #004d40;
+    transform: translateY(-2px);
 }
 
 /* Responsive Styles */
@@ -102,13 +127,13 @@ button:hover {
     main {
         padding: 10px;
     }
-    
+
     button {
         width: 100%;
-        padding: 12px; /* Full-width buttons on small screens */
+        padding: 12px;
     }
 
     nav ul li {
-        text-align: center; /* Center the links on small screens */
+        text-align: center;
     }
 }
