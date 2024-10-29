@@ -9,96 +9,26 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #f5f5f5;
-}
-
-/* Navbar */
-header {
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
-}
-
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff5a5f;
-}
-
-nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Hero Section */
-.hero {
-    background: url('images/technology.jpg') no-repeat center center/cover;
-    color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 20px;
 }
 
-.hero-content h2 {
+/* Title Styling */
+.main-title {
     font-size: 2.5em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-}
-
-.hero-content p {
-    font-size: 1.2em;
+    color: #333;
     margin-bottom: 20px;
-}
-
-.search-bar {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.search-bar input[type="text"] {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    width: 150px;
-}
-
-.search-bar button {
-    background-color: #ff5a5f;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.search-bar button:hover {
-    background-color: #e04750;
+    font-weight: bold;
 }
 
 /* Categories Section */
 .categories {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 0 auto;
     padding: 20px;
 }
 
@@ -108,7 +38,7 @@ nav ul li a {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 180px;
-    text-align: center;
+    cursor: pointer;
     transition: transform 0.3s;
 }
 
@@ -128,4 +58,37 @@ nav ul li a {
 
 .category-card p {
     color: #777;
+}
+
+/* Topic Content Section */
+.hidden {
+    display: none;
+}
+
+#topic-content {
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+}
+
+#topic-content button {
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: #ff5a5f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-card {
+        width: 80%;
+    }
 }
