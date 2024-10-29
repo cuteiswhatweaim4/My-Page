@@ -54,11 +54,12 @@ nav ul li a {
     text-decoration: none;
     color: #00796b; /* Teal color for links */
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s; /* Add a transform for hover */
 }
 
 nav ul li a:hover {
     color: #004d40; /* Darker teal on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 /* Topic Content Styles */
@@ -69,6 +70,8 @@ nav ul li a:hover {
     border-radius: 8px;
     background-color: #f1f8e9; /* Light green for content background */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start with opacity 0 for fade effect */
+    transition: opacity 0.3s; /* Transition for fade effect */
 }
 
 /* Button Styles */
@@ -81,6 +84,12 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-button {
+    display: block; /* Ensure it takes its own line */
+    margin: 20px auto; /* Center the button */
+    width: 200px; /* Fixed width */
 }
 
 button:hover {
