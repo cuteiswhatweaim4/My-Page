@@ -5,61 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knowledge Facts</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script> <!-- Use defer to ensure the DOM loads before the script runs -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; /* Light blue background */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        header, footer {
+            text-align: center;
+            margin: 20px 0;
+        }
+        main {
+            max-width: 600px;
+            margin: auto;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 10px 0;
+        }
+        button {
+            margin-top: 20px;
+        }
+        .topic-content {
+            display: none; /* Initially hide all topic content */
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Welcome to Knowledge Facts</h1>
-        <nav>
-            <ul>
-                <li><a href="#history">History</a></li>
-                <li><a href="#science">Science</a></li>
-                <li><a href="#geography">Geography</a></li>
-                <li><a href="#technology">Technology</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <section id="history">
+        <h2>Topics</h2>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showContent('history')">History</a></li>
+                <li><a href="#" onclick="showContent('science')">Science</a></li>
+                <li><a href="#" onclick="showContent('geography')">Geography</a></li>
+                <li><a href="#" onclick="showContent('technology')">Technology</a></li>
+            </ul>
+        </nav>
+
+        <div id="history" class="topic-content">
             <h2>Fascinating History Facts</h2>
             <ul>
                 <li>The Great Wall of China is not visible from space with the naked eye.</li>
                 <li>Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid.</li>
                 <li>The shortest war in history was between Britain and Zanzibar on August 27, 1896. Zanzibar surrendered after 38 minutes.</li>
             </ul>
-        </section>
+            <button onclick="hideContent()">Back to Topics</button>
+        </div>
 
-        <section id="science">
+        <div id="science" class="topic-content">
             <h2>Intriguing Science Facts</h2>
             <ul>
                 <li>Water can boil and freeze at the same time, a phenomenon called the triple point.</li>
                 <li>Bananas are berries, while strawberries are not.</li>
                 <li>Humans share 50% of their DNA with bananas.</li>
             </ul>
-        </section>
+            <button onclick="hideContent()">Back to Topics</button>
+        </div>
 
-        <section id="geography">
+        <div id="geography" class="topic-content">
             <h2>Interesting Geography Facts</h2>
             <ul>
                 <li>Russia is larger than Pluto.</li>
                 <li>There are more stars in the universe than grains of sand on all the Earth's beaches.</li>
                 <li>The Sahara Desert is larger than the entire continental United States.</li>
             </ul>
-        </section>
+            <button onclick="hideContent()">Back to Topics</button>
+        </div>
 
-        <section id="technology">
+        <div id="technology" class="topic-content">
             <h2>Fascinating Technology Facts</h2>
             <ul>
                 <li>The first 1GB hard drive was introduced in 1980, weighing over 500 pounds and costing $40,000.</li>
                 <li>More people own a mobile phone than a toothbrush.</li>
                 <li>The first computer virus was created in 1986 and was called "Brain."</li>
             </ul>
-        </section>
+            <button onclick="hideContent()">Back to Topics</button>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Knowledge Facts</p>
     </footer>
+
+    <script>
+        function showContent(topic) {
+            // Hide all topic contents
+            const contents = document.querySelectorAll('.topic-content');
+            contents.forEach(content => content.style.display = 'none');
+
+            // Show the selected topic content
+            document.getElementById(topic).style.display = 'block';
+        }
+
+        function hideContent() {
+            // Hide all topic contents and show the topics list
+            const contents = document.querySelectorAll('.topic-content');
+            contents.forEach(content => content.style.display = 'none');
+        }
+    </script>
 </body>
 </html>
