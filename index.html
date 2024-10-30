@@ -3,34 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Knowledge Facts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <section class="topic-links">
-        <a id="technology" class="category-card" onclick="loadContent('technology')">
-            <span class="icon">🔍</span>
+
+<header>
+    <h1>Knowledge Facts</h1>
+    <p>Discover interesting facts from various fields!</p>
+</header>
+
+<section>
+    <h2>Topics</h2>
+    <div class="topics-container">
+        <div class="topic" onclick="showSection('technology')">
             <h3>Technology</h3>
-        </a>
-        <a id="science" class="category-card" onclick="loadContent('science')">
-            <span class="icon">🌍</span>
-            <h3>Science</h3>
-        </a>
-        <a id="history" class="category-card" onclick="loadContent('history')">
-            <span class="icon">📚</span>
-            <h3>History</h3>
-        </a>
-        <a id="arts" class="category-card" onclick="loadContent('arts')">
-            <span class="icon">🎨</span>
+        </div>
+        <div class="topic" onclick="showSection('arts')">
             <h3>Arts</h3>
-        </a>
-    </section>
+        </div>
+        <div class="topic" onclick="showSection('science')">
+            <h3>Science</h3>
+        </div>
+        <div class="topic" onclick="showSection('history')">
+            <h3>History</h3>
+        </div>
+        <div class="topic" onclick="showSection('nature')">
+            <h3>Nature</h3>
+        </div>
+    </div>
 
-    <section id="contentSection" style="display: none;">
-        <button onclick="returnToHome()">Return to Homepage</button>
-        <div id="content"></div>
-    </section>
+    <!-- Technology Facts -->
+    <div id="technology" class="fact-section">
+        <h2>Technology Facts</h2>
+        <img src="images/technology.jpg" alt="Technology">
+        <div class="fact-box">
+            <div class="fact">The first computer was invented in the 1940s and was called ENIAC.</div>
+            <div class="fact">More than 3.5 billion people use the internet worldwide.</div>
+        </div>
+        <a class="return-home" href="#" onclick="returnToHomepage()">Return to Homepage</a>
+    </div>
 
-    <script src="app.js"></script>
+    <!-- Arts Facts -->
+    <div id="arts" class="fact-section">
+        <h2>Arts Facts</h2>
+        <img src="images/arts.jpg" alt="Arts">
+        <div class="fact-box">
+            <div class="fact">The Mona Lisa has no eyebrows. It was the fashion in Renaissance Florence to shave them off.</div>
+            <div class="fact">Vincent van Gogh only sold one painting during his lifetime, "The Red Vineyard."</div>
+        </div>
+        <a class="return-home" href="#" onclick="returnToHomepage()">Return to Homepage</a>
+    </div>
+
+    <!-- Science Facts -->
+    <div id="science" class="fact-section">
+        <h2>Science Facts</h2>
+        <img src="images/science.jpg" alt="Science">
+        <div class="fact-box">
+            <div class="fact">Water can boil and freeze at the same time; this is called the triple point.</div>
+            <div class="fact">Bananas are radioactive due to their high potassium content.</div>
+        </div>
+        <a class="return-home" href="#" onclick="returnToHomepage()">Return to Homepage</a>
+    </div>
+
+    <!-- History Facts -->
+    <div id="history" class="fact-section">
+        <h2>History Facts</h2>
+        <img src="images/history.jpg" alt="History">
+        <div class="fact-box">
+            <div class="fact">The Great Wall of China is not visible from space with the naked eye.</div>
+            <div class="fact">Cleopatra lived closer to the moon landing than to the construction of the Great Pyramid.</div>
+        </div>
+        <a class="return-home" href="#" onclick="returnToHomepage()">Return to Homepage</a>
+    </div>
+
+    <!-- Nature Facts -->
+    <div id="nature" class="fact-section">
+        <h2>Nature Facts</h2>
+        <img src="images/nature.jpg" alt="Nature">
+        <div class="fact-box">
+            <div class="fact">There are more trees on Earth than stars in the Milky Way galaxy.</div>
+            <div class="fact">Some species of bamboo can grow up to 91 cm (35 inches) in a single day.</div>
+        </div>
+        <a class="return-home" href="#" onclick="returnToHomepage()">Return to Homepage</a>
+    </div>
+</section>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.fact-section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+        document.getElementById(sectionId).style.display = 'flex'; // Use flex to show properly
+    }
+
+    function returnToHomepage() {
+        const sections = document.querySelectorAll('.fact-section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+    }
+</script>
+
 </body>
 </html>
