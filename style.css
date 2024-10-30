@@ -1,59 +1,91 @@
-/* === Topic Links with Background Images === */
-.topic-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 30px;
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-.topic-links a {
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  color: #fff;
-  background-color: #4682b4; /* Fallback color in case images don’t load */
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-  background-size: cover;
-  background-position: center;
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Background images for each topic */
-.topic-links a#technology {
-  background-image: url('images/technology.jpg');
+section {
+    padding: 20px;
 }
 
-.topic-links a#science {
-  background-image: url('images/science.jpg');
+h1, h2 {
+    margin: 0;
+    padding: 10px 0;
 }
 
-.topic-links a#history {
-  background-image: url('images/history.jpg');
+.topics-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.topic-links a#arts {
-  background-image: url('images/arts.jpg');
+.topic {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    flex: 1 1 300px;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
 }
 
-.topic-links a:hover {
-  transform: scale(1.05);
+.topic:hover {
+    transform: scale(1.05);
 }
 
-/* Mobile and Desktop Responsive Adjustments */
-@media (max-width: 768px) {
-  .col {
-    min-width: 100%; /* Full-width on smaller screens */
-  }
+.fact-section {
+    display: none;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative; /* For overlay positioning */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
 
-  .topic-links {
-    flex-direction: column;
-  }
+.fact-section img {
+    max-width: 50%; /* Limit image size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space between image and text */
+    z-index: 2; /* Ensure the image is above any overlays */
+}
+
+.fact-box {
+    background: rgba(255, 255, 255, 0.9); /* Solid white background with slight transparency */
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+    text-align: center; /* Center text within the box */
+    position: relative; /* To maintain stacking context */
+    z-index: 2; /* Ensure it is above the overlay */
+}
+
+.fact {
+    color: #333; /* Dark text color for better contrast */
+    margin: 5px 0; /* Space between facts */
+    font-weight: 400; /* Normal weight for readability */
+}
+
+.return-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative; /* Ensure the button is positioned properly */
+    z-index: 3; /* Higher z-index to be above the overlay */
 }
